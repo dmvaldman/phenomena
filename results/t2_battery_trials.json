@@ -1,0 +1,3537 @@
+[
+ {
+  "cond": "control",
+  "concept": null,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "control",
+  "concept": null,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "control",
+  "concept": null,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "control",
+  "concept": null,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "control",
+  "concept": null,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 0,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 0,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 0,
+  "q": 1,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 0,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 0,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 0,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 0,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 0,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 0,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 0,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 0,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 1,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 1,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 1,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 1,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 1,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 1,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 1,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 1,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 1,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 1,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 1,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 2,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 2,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 2,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 2,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 2,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 2,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 2,
+  "q": 3,
+  "tpl": null,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 2,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 2,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 2,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 2,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Gray"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 3,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 3,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 3,
+  "q": 1,
+  "tpl": null,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 3,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 2,
+  "tpl": 0,
+  "completion": " gray"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 2,
+  "tpl": 2,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 3,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 3,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 3,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 3,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 6"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 4"
+ },
+ {
+  "cond": "think",
+  "concept": 3,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 3,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 3,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 4,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 4,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 4,
+  "q": 1,
+  "tpl": null,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 4,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 4,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 4,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 4,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 4,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 4,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 4,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 4,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 0,
+  "tpl": 0,
+  "completion": " white"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 5,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 5,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 5,
+  "q": 1,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 5,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 5,
+  "q": 2,
+  "tpl": null,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 5,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 5,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 5,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 5,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 5,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 5,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 6,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 6,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Naples"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 6,
+  "q": 1,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 6,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 6,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 6,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 6,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 6,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 6,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 5"
+ },
+ {
+  "cond": "ignore",
+  "concept": 6,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 6,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 7,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 7,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 7,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 7,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 2,
+  "tpl": 0,
+  "completion": " brown"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 7,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 7,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 3,
+  "tpl": 0,
+  "completion": " Cold"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 7,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 7,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 7,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 7,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 7,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 0,
+  "tpl": 0,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 0,
+  "tpl": 1,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 8,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 8,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Milan"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 8,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 8,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 2,
+  "tpl": 0,
+  "completion": " white"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 8,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 8,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 8,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 8,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 8,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 5"
+ },
+ {
+  "cond": "ignore",
+  "concept": 8,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "mention",
+  "concept": 8,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Red"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 9,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 9,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 9,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 9,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 2,
+  "tpl": 0,
+  "completion": " brown"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 9,
+  "q": 2,
+  "tpl": null,
+  "completion": " Green"
+ },
+ {
+  "cond": "mention",
+  "concept": 9,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 9,
+  "q": 3,
+  "tpl": null,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 9,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 9,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 9,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 9,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 10,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 10,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 10,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 10,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 10,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 10,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 10,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 10,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 14"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 10,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 10,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 10,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 11,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 11,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 11,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 11,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 2,
+  "tpl": 2,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 11,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 11,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 11,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 11,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 11,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 11,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 11,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 12,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 12,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 12,
+  "q": 1,
+  "tpl": null,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 12,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 12,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 12,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 12,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 12,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 12,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 12,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 12,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 13,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 13,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 13,
+  "q": 1,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 13,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 13,
+  "q": 2,
+  "tpl": null,
+  "completion": " Green"
+ },
+ {
+  "cond": "mention",
+  "concept": 13,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 13,
+  "q": 3,
+  "tpl": null,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 13,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 13,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 13,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 13,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 14,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 14,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 14,
+  "q": 1,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 14,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 2,
+  "tpl": 0,
+  "completion": " Green"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 14,
+  "q": 2,
+  "tpl": null,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 14,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 3,
+  "tpl": 0,
+  "completion": " Cold"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 14,
+  "q": 3,
+  "tpl": null,
+  "completion": " Cold."
+ },
+ {
+  "cond": "mention",
+  "concept": 14,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 14,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 14,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 14,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 15,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 15,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 15,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 15,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 15,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 15,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 15,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 15,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 15,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 15,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 15,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Gray"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 0,
+  "tpl": 1,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 16,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 16,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 16,
+  "q": 1,
+  "tpl": null,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "concept": 16,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 16,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 16,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 16,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 16,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 29"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 16,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 16,
+  "q": 4,
+  "tpl": null,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "concept": 16,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 17,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 17,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 17,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 17,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 17,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 17,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 17,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 17,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 17,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 17,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 17,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 0,
+  "tpl": 1,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 18,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 18,
+  "q": 0,
+  "tpl": null,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 18,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 18,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 2,
+  "tpl": 0,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 2,
+  "tpl": 2,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 18,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 18,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 3,
+  "tpl": 2,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 18,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 18,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 18,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 18,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 18,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 0,
+  "tpl": 0,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 0,
+  "tpl": 1,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 0,
+  "tpl": 2,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "concept": 19,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "concept": 19,
+  "q": 0,
+  "tpl": null,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 1,
+  "tpl": 0,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 1,
+  "tpl": 1,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 1,
+  "tpl": 2,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "concept": 19,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "concept": 19,
+  "q": 1,
+  "tpl": null,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 2,
+  "tpl": 0,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 2,
+  "tpl": 1,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 2,
+  "tpl": 2,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "concept": 19,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "concept": 19,
+  "q": 2,
+  "tpl": null,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 3,
+  "tpl": 0,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 3,
+  "tpl": 1,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 3,
+  "tpl": 2,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "concept": 19,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "concept": 19,
+  "q": 3,
+  "tpl": null,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 4,
+  "tpl": 0,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 4,
+  "tpl": 1,
+  "completion": " 28"
+ },
+ {
+  "cond": "think",
+  "concept": 19,
+  "q": 4,
+  "tpl": 2,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "concept": 19,
+  "q": 4,
+  "tpl": null,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "concept": 19,
+  "q": 4,
+  "tpl": null,
+  "completion": " 7"
+ }
+]

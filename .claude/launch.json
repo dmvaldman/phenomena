@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jlens-visualizer",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["scripts/tunnel.sh"],
+      "port": 7860
+    }
+  ]
+}
