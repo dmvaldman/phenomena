@@ -1,0 +1,18 @@
+{
+  "experiment": "T0_jlens",
+  "version": 1,
+  "properties": ["instrument — underpins all lens readouts; not itself a P1-P10 test"],
+  "date": "2026-07-10",
+  "model": "BAAI/Emu3-Chat-hf",
+  "what": "Per-layer Jacobian-lens matrices J_l = E[dh_final/dh_l], estimated by stochastic VJP probing with an identity control variate over wikitext-103 (512-token chunks, targets t' >= 64, batch 4).",
+  "artifact": "pod volume /workspace/phenomena/data/jlens/jlens_final.npz (J, J_even, J_odd; ~3GB, not backed up locally)",
+  "samples": 153600,
+  "validation": {
+    "split_half_cosine_residual": {"L16": 0.472, "L24": 0.675, "L30": 0.795},
+    "readout_level_even_odd_log_rank_correlation": 0.938,
+    "late_layer_agreement_with_logit_lens": "confirmed qualitatively",
+    "methodology_vs_paper": "definition, averaging structure, and readout formula match transformer-circuits.pub/2026/workspace; paper is silent on estimator; our sampling choices fall inside its stated robustness set (future targets included, attention not frozen). Deviations to report: stochastic VJP estimator + identity control variate; wikitext-103 as prompt corpus."
+  },
+  "script": "src/t0_jlens.py",
+  "log": "t0_jlens.log"
+}

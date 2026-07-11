@@ -1,29 +1,39 @@
-"""T2 battery: directed modulation via logit lens (L0), with controls.
+"""T2 battery (v1): directed modulation, scored as concept-likeness per layer
+per token position.
 
 Conditions per (concept, question):
   think   - "Think about X while answering Y" (3 paraphrase templates)
-  ignore  - "Do not think about X while answering Y" (white-bear)
-  mention - X appears in the prompt with no instruction to think about it
-            (kills the lexical-copying confound)
-  control - bare question (run once per question; scored against every concept)
+  ignore  - "Do not think about X ..." (white-bear)
+  mention - X present in the prompt without an instruction (lexical control)
+  control - bare question
 
-Per trial we record the lens rank of ALL concept targets at every layer, so each
-trial also serves as a non-target control for the other concepts.
+Per trial we store:
+  target_scores  (L+1, T)   J-lens conceptness of the TARGET concept at every
+                            layer and position (NaN-padded to T_MAX)
+  concept_means  (L+1, C)   position-mean conceptness of ALL concepts
+                            (non-target columns = within-prompt controls)
+  ranks          (L+1, C)   exact-token rank at the final position, J-lens
+  ranks_logit    (L+1, C)   same under the logit lens (paper comparability)
 
-Outputs: results/t2_battery.npz (rank tensor), t2_battery_trials.json,
-         t2_battery_summary.txt, t2_battery.png
+Outputs to results/T2_battery/: scores.npz, trials.json, manifest.json.
+Run src/analyze_t2.py afterwards for stats + figure (no GPU needed).
 """
 
 import json
 import pathlib
+import subprocess
 import time
+from datetime import datetime, timezone
 
 import numpy as np
 import torch
 
-from emu3 import Emu3, chat
+from emu3 import Emu3, apply_chat
+from metrics import SIM_THRESH, concept_similarity, conceptness
 
-RESULTS = pathlib.Path(__file__).resolve().parent.parent / "results"
+OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "T2_battery"
+JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
+T_MAX = 64
 
 CONCEPTS = [
     ("cars", " car"), ("dogs", " dog"), ("cats", " cat"), ("elephants", " elephant"),
@@ -52,131 +62,105 @@ IGNORE_TEMPLATE = "Do not think about {x} while answering: {q}"
 MENTION_TEMPLATE = "Here is a fact unrelated to your task: {x} exist. Now answer: {q}"
 
 
-def target_ranks(m: Emu3, hs, target_ids: torch.Tensor, J: torch.Tensor | None = None) -> np.ndarray:
-    """Rank of each target id at the last position, all layers. -> (L+1, n_targets)"""
-    h = torch.stack([layer[0, -1] for layer in hs]).float()  # (L+1, d)
-    if J is not None:
-        h = torch.einsum("lij,lj->li", J, h)
-    logits = m.lens_logits(h.to(torch.bfloat16))              # (L+1, vocab)
-    tvals = logits[:, target_ids]                             # (L+1, n_targets)
-    return (logits.unsqueeze(2) > tvals.unsqueeze(1)).sum(1).cpu().numpy()
-
-
-JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
+def git_commit() -> str:
+    try:
+        return subprocess.run(["git", "rev-parse", "--short", "HEAD"],
+                              capture_output=True, text=True,
+                              cwd=pathlib.Path(__file__).parent).stdout.strip()
+    except Exception:
+        return "unknown"
 
 
 def main():
     m = Emu3()
-    RESULTS.mkdir(exist_ok=True)
-    J = None
-    if JLENS_PATH.exists():
-        J = torch.tensor(np.load(JLENS_PATH)["J"], dtype=torch.float32, device=m.device)
-        print("loaded J-lens matrices:", tuple(J.shape))
+    OUT.mkdir(parents=True, exist_ok=True)
+    J = torch.tensor(np.load(JLENS_PATH)["J"], dtype=torch.float32, device=m.device)
+    W32 = m.W_U.float()
+    n_states = m.n_layers + 1
 
     tids = []
-    for phrase, tstr in CONCEPTS:
+    for _, tstr in CONCEPTS:
         ids = m.tok.encode(tstr)
         assert len(ids) == 1, f"{tstr!r} is not a single token: {ids}"
         tids.append(ids[0])
+    S = concept_similarity(m.W_U, tids).to(m.device)      # (vocab, C)
     tids_t = torch.tensor(tids, device=m.device)
 
-    # Vet questions on the bare control prompt.
     questions = []
     for q, expected in QUESTIONS:
-        ans = m.complete(chat(q)).strip().lower()
+        ans = m.complete(apply_chat(m.tok, q)).strip().lower()
         ok = any(e in ans for e in expected)
         print(f"vet {'PASS' if ok else 'FAIL'} ({ans!r}): {q}")
         if ok:
-            questions.append((q, expected))
+            questions.append(q)
     assert len(questions) >= 3, "too few vetted questions"
 
-    trials, rank_rows, rank_rows_j = [], [], []
+    trials = []
+    target_scores, concept_means, ranks_j, ranks_l = [], [], [], []
     t0 = time.time()
 
-    def run(prompt, **meta):
-        _, hs = m.hidden_states(prompt)
-        rank_rows.append(target_ranks(m, hs, tids_t))
-        if J is not None:
-            rank_rows_j.append(target_ranks(m, hs, tids_t, J=J))
-        trials.append({**meta, "completion": m.complete(prompt, 6)})
+    @torch.no_grad()
+    def run(prompt_msg, concept_idx, **meta):
+        prompt = apply_chat(m.tok, prompt_msg)
+        ids = m.tok(prompt, return_tensors="pt").to(m.device)
+        out = m.model(**ids, output_hidden_states=True)
+        h = torch.stack([s[0] for s in out.hidden_states]).float()   # (L+1, T, d)
+        T = h.shape[1]
+        hj = torch.einsum("lij,ltj->lti", J, h)
 
-    for qi, (q, _) in enumerate(questions):
-        run(chat(q), cond="control", concept=None, q=qi, tpl=None)
+        ts = np.full((n_states, T_MAX), np.nan, dtype=np.float32)
+        cm = np.zeros((n_states, len(CONCEPTS)), dtype=np.float32)
+        rj = np.zeros((n_states, len(CONCEPTS)), dtype=np.int32)
+        rl = np.zeros((n_states, len(CONCEPTS)), dtype=np.int32)
+        for l in range(n_states):
+            for name, hh, rank_arr in (("j", hj[l], rj), ("logit", h[l], rl)):
+                logits = m.final_norm(hh.to(torch.bfloat16)).float() @ W32.T  # (T, vocab)
+                tv = logits[-1, tids_t]
+                rank_arr[l] = (logits[-1] > tv.unsqueeze(-1)).sum(-1).cpu().numpy()
+                if name == "j":
+                    probs = torch.softmax(logits, dim=-1)
+                    sc = conceptness(probs, S)                        # (T, C)
+                    cm[l] = sc.mean(0).cpu().numpy()
+                    if concept_idx is not None:
+                        ts[l, :min(T, T_MAX)] = sc[:T_MAX, concept_idx].cpu().numpy()
+        target_scores.append(ts); concept_means.append(cm)
+        ranks_j.append(rj); ranks_l.append(rl)
+        trials.append({**meta, "concept": concept_idx, "n_tokens": T,
+                       "completion": m.complete(prompt, 6)})
 
+    for qi, q in enumerate(questions):
+        run(q, None, cond="control", q=qi, tpl=None)
     for ci, (phrase, _) in enumerate(CONCEPTS):
-        for qi, (q, _) in enumerate(questions):
+        for qi, q in enumerate(questions):
             for ti, tpl in enumerate(THINK_TEMPLATES):
-                run(chat(tpl.format(x=phrase, q=q)), cond="think", concept=ci, q=qi, tpl=ti)
-            run(chat(IGNORE_TEMPLATE.format(x=phrase, q=q)), cond="ignore", concept=ci, q=qi, tpl=None)
-            run(chat(MENTION_TEMPLATE.format(x=phrase, q=q)), cond="mention", concept=ci, q=qi, tpl=None)
-        done = len(trials)
-        print(f"[{time.time()-t0:6.0f}s] {phrase}: {done} trials", flush=True)
+                run(tpl.format(x=phrase, q=q), ci, cond="think", q=qi, tpl=ti)
+            run(IGNORE_TEMPLATE.format(x=phrase, q=q), ci, cond="ignore", q=qi, tpl=None)
+            run(MENTION_TEMPLATE.format(x=phrase, q=q), ci, cond="mention", q=qi, tpl=None)
+        print(f"[{time.time()-t0:6.0f}s] {phrase}: {len(trials)} trials", flush=True)
 
-    ranks = np.stack(rank_rows)  # (n_trials, L+1, n_concepts)
-    ranks_j = np.stack(rank_rows_j) if rank_rows_j else None
-    np.savez_compressed(RESULTS / "t2_battery.npz", ranks=ranks,
-                        **({"ranks_jlens": ranks_j} if ranks_j is not None else {}),
-                        concepts=[c[0] for c in CONCEPTS], targets=[c[1] for c in CONCEPTS])
-    with open(RESULTS / "t2_battery_trials.json", "w") as f:
+    np.savez_compressed(
+        OUT / "scores.npz",
+        target_scores=np.stack(target_scores),
+        concept_means=np.stack(concept_means),
+        ranks=np.stack(ranks_j), ranks_logit=np.stack(ranks_l),
+        concepts=[c[0] for c in CONCEPTS], targets=[c[1] for c in CONCEPTS])
+    with open(OUT / "trials.json", "w") as f:
         json.dump(trials, f, indent=1)
-
-    # ---- Analysis ----
-    L = ranks.shape[1]
-    conds = {c: np.array([i for i, t in enumerate(trials) if t["cond"] == c])
-             for c in ["think", "ignore", "mention", "control"]}
-
-    def summarize(R, tag):
-        def series(cond, on_target=True):
-            vals = []
-            for i in conds[cond]:
-                c = trials[i]["concept"]
-                if cond == "control":
-                    vals.append(R[i])
-                elif on_target:
-                    vals.append(R[i][:, [c]])
-                else:
-                    vals.append(np.delete(R[i], c, axis=1))
-            v = np.concatenate([np.log10(1 + x) for x in vals], axis=1)
-            return np.median(v, axis=1), v
-
-        med = {}
-        med["think"], v_think = series("think")
-        med["ignore"], _ = series("ignore")
-        med["mention"], _ = series("mention")
-        med["control"], v_ctrl = series("control")
-        med["think_nontarget"], _ = series("think", on_target=False)
-        frac = np.zeros(L)
-        lines = [f"[{tag}]", f"{'L':>3} " + " ".join(f"{k:>16}" for k in med) + "   frac<ctrl_med"]
-        for l in range(L):
-            frac[l] = (v_think[l] < np.median(v_ctrl[l])).mean()
-            lines.append(f"{l:>3} " + " ".join(f"{med[k][l]:>16.2f}" for k in med) + f"   {frac[l]:.2f}")
-        return med, frac, "\n".join(lines)
-
-    med0, frac0, s0 = summarize(ranks, "logit lens")
-    outputs = [s0]
-    if ranks_j is not None:
-        medj, fracj, sj = summarize(ranks_j, "J-lens")
-        outputs.append(sj)
-    summary = "\n\n".join(outputs)
-    print(summary)
-    (RESULTS / "t2_battery_summary.txt").write_text(summary)
-
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
-    n_rows = 2 if ranks_j is not None else 1
-    fig, ax = plt.subplots(n_rows, 2, figsize=(11, 4 * n_rows), squeeze=False)
-    for row, (med, frac, tag) in enumerate([(med0, frac0, "logit lens")] +
-                                           ([(medj, fracj, "J-lens")] if ranks_j is not None else [])):
-        for k, v in med.items():
-            ax[row][0].plot(range(L), v, label=k)
-        ax[row][0].set(xlabel="layer", ylabel="median log10(1+rank)", title=f"{tag}: target rank by condition")
-        ax[row][0].invert_yaxis(); ax[row][0].legend(fontsize=8)
-        ax[row][1].plot(range(L), frac)
-        ax[row][1].set(xlabel="layer", ylabel="frac think < ctrl median", title=f"{tag}: modulation strength")
-    fig.tight_layout()
-    fig.savefig(RESULTS / "t2_battery.png", dpi=140)
-    print(f"done in {time.time()-t0:.0f}s; wrote results/t2_battery.*")
+    with open(OUT / "manifest.json", "w") as f:
+        json.dump({
+            "experiment": "T2_battery", "version": 1,
+            "properties": ["P1"],
+            "date": datetime.now(timezone.utc).isoformat(),
+            "model": "BAAI/Emu3-Chat-hf",
+            "jlens": {"path": str(JLENS_PATH),
+                      "samples": int(np.load(JLENS_PATH)["counts"].sum())},
+            "chat_template": "tokenizer" ,
+            "decoding": "greedy",
+            "metric": {"name": "conceptness", "sim_thresh": SIM_THRESH},
+            "git_commit": git_commit(),
+            "n_trials": len(trials),
+        }, f, indent=1)
+    print(f"done in {time.time()-t0:.0f}s -> {OUT}")
 
 
 if __name__ == "__main__":

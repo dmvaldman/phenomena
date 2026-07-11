@@ -1,0 +1,20 @@
+{
+  "experiment": "T2_battery",
+  "version": 0,
+  "status": "superseded — kept for the record; v1 (results/T2_battery/) re-runs with the conceptness metric, all-position scoring, and the tokenizer chat template",
+  "properties": ["P1"],
+  "date": "2026-07-10",
+  "model": "BAAI/Emu3-Chat-hf",
+  "what": "Directed modulation: 20 concepts x 5 vetted questions x {think(3 paraphrases), ignore, mention, control}; exact-token rank at the answer position, all 33 layers, logit lens + J-lens.",
+  "chat_template": "manual USER:/ASSISTANT: format",
+  "decoding": "greedy",
+  "headline": {
+    "band": "L22-30 (~69-94% depth)",
+    "jlens_L25_median_ranks": {"think": "~100", "ignore": "~2700", "mention": "~2200", "control": "~46000"},
+    "frac_think_below_control_median_L26_28": 1.0,
+    "mann_whitney_z_think_vs_control_band": -14.1,
+    "white_bear": "ignore < think but >> control (z=-9.1)",
+    "covert": "0/300 think trials mention the concept in output; 89% answer distractor correctly"
+  },
+  "script": "src/t2_battery.py at git 43269c0-era (pre-conceptness rewrite)"
+}
