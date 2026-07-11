@@ -51,9 +51,9 @@ function heatColor(p) {
   const a = Math.min(1, Math.pow(p, 0.4));
   return `rgba(40, 90, 200, ${(0.08 + 0.72 * a).toFixed(3)})`;
 }
-function rankColor(r, vocab) {
-  const x = 1 - Math.min(1, Math.log10(1 + r) / Math.log10(vocab));
-  return `rgba(200, 40, 40, ${(0.05 + 0.85 * Math.pow(x, 2)).toFixed(3)})`;
+function scoreColor(v, vmax) {
+  const x = vmax > 0 ? Math.sqrt(v / vmax) : 0;
+  return `rgba(200, 40, 40, ${(0.04 + 0.86 * x).toFixed(3)})`;
 }
 function esc(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/ /g,"·"); }
 
@@ -65,16 +65,17 @@ function addBubble(role, text) {
 }
 
 function addGrid(d) {
-  const probeMode = !!d.probe_ranks;
+  const probeMode = !!d.probe_scores;
   const T = d.tokens.length;
+  const vmax = probeMode ? Math.max(...d.probe_scores.flat()) : 0;
   let html = "<table><tr><th>layer</th>" +
       d.tokens.map((t, i) => `<th class="${d.roles[i] ? "gen" : ""}">${esc(t)}</th>`).join("") + "</tr>";
   for (let l = 0; l < d.n_layers; l++) {
     html += `<tr><td class="layer">L${l}</td>`;
     for (let t = 0; t < T; t++) {
       const top = d.grid[l][t];
-      const bg = probeMode ? rankColor(d.probe_ranks[l][t], d.vocab_size) : heatColor(top[0].p);
-      const label = probeMode ? d.probe_ranks[l][t] : esc(top[0].tok);
+      const bg = probeMode ? scoreColor(d.probe_scores[l][t], vmax) : heatColor(top[0].p);
+      const label = probeMode ? d.probe_scores[l][t].toPrecision(2) : esc(top[0].tok);
       html += `<td data-l="${l}" data-t="${t}" style="background:${bg}">${label}</td>`;
     }
     html += "</tr>";
@@ -91,7 +92,7 @@ function addGrid(d) {
       const top = d.grid[l][t];
       let s = `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>`;
       s += top.map(x => `${esc(x.tok)} <span class="p">${(x.p*100).toFixed(1)}%</span>`).join("<br>");
-      if (probeMode) s += `<br><span class="r">probe rank: ${d.probe_ranks[l][t]}</span>`;
+      if (probeMode) s += `<br><span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`;
       tip.innerHTML = s;
       tip.style.display = "block";
       tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 220) + "px";
@@ -125,7 +126,7 @@ async function send() {
     messages.push({role: "assistant", content: d.reply});
     shownTokens = d.total_tokens;
     $("status").textContent = `${d.tokens.length} new tokens × ${d.n_layers} layers` +
-        (d.probe_token ? ` — probe "${d.probe_token}" (red = low rank)` : "") +
+        (d.probe_token ? ` — probe "${d.probe_token}" (red = conceptness)` : "") +
         ` — temp ${d.temperature}, seed ${d.seed} — green headers = generated`;
     $("status").title = d.prompt_used;
   } catch (e) {

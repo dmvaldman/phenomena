@@ -15,6 +15,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from emu3 import Emu3, apply_chat
+from metrics import SIM_THRESH
 
 MAX_TOKENS = 256
 MAX_REPLY = 64
@@ -26,6 +27,15 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], all
 m = Emu3()
 J = torch.tensor(np.load(JLENS_PATH)["J"], dtype=torch.float32, device=m.device)
 W32 = m.W_U.float()  # (vocab, d) fp32 cached
+Wc = W32 - W32.mean(0, keepdim=True)
+Wc = Wc / (Wc.norm(dim=1, keepdim=True) + 1e-8)  # centered+normalized, for conceptness
+
+
+def probe_sim_column(probe_id: int) -> torch.Tensor:
+    """(vocab,) thresholded cosine similarity of every token to the probe."""
+    s = Wc @ Wc[probe_id]
+    s[s < SIM_THRESH] = 0.0
+    return s
 
 
 class ChatRequest(BaseModel):
@@ -52,13 +62,15 @@ def grid_readout(text: str, n_prompt_tokens: int, lens: str, probe: str | None,
     normed = m.final_norm(h.to(torch.bfloat16)).float()
 
     n_layers, T, _ = normed.shape
-    probe_id = None
+    probe_id, S_probe = None, None
     if probe:
         enc = m.tok.encode(probe)
-        probe_id = enc[0] if enc else None
+        if enc:
+            probe_id = enc[0]
+            S_probe = probe_sim_column(probe_id)
 
     skip = max(0, min(skip, T))
-    grid, probe_ranks = [], []
+    grid, probe_ranks, probe_scores = [], [], []
     for l in range(n_layers):
         logits = normed[l] @ W32.T
         probs = torch.softmax(logits, dim=-1)
@@ -68,6 +80,7 @@ def grid_readout(text: str, n_prompt_tokens: int, lens: str, probe: str | None,
                      for t in range(skip, T)])
         if probe_id is not None:
             probe_ranks.append((logits > logits[:, probe_id].unsqueeze(1)).sum(1).tolist()[skip:])
+            probe_scores.append([round(float(x), 5) for x in (probs @ S_probe).tolist()[skip:]])
 
     return {
         "tokens": [m.tok.decode([i]) for i in ids.input_ids[0, skip:].tolist()],
@@ -77,6 +90,7 @@ def grid_readout(text: str, n_prompt_tokens: int, lens: str, probe: str | None,
         "total_tokens": T,
         "grid": grid,
         "probe_ranks": probe_ranks or None,
+        "probe_scores": probe_scores or None,
         "probe_token": m.tok.decode([probe_id]) if probe_id is not None else None,
         "vocab_size": W32.shape[0],
     }
