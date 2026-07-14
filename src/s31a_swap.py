@@ -24,7 +24,7 @@ import torch
 
 from emu3 import Emu3, apply_chat
 
-OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "T3_swap"
+OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "3.1a_swap"
 JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
 BAND_LAYERS = list(range(16, 31))   # patch layers (residual stream out of layer l)
 ALPHAS = [1.0, 2.0]
@@ -185,7 +185,7 @@ def main():
     with open(OUT / "trials.json", "w") as f:
         json.dump(trials, f, indent=1)
     with open(OUT / "manifest.json", "w") as f:
-        json.dump({"experiment": "T3_swap", "version": 1,
+        json.dump({"experiment": "3.1.a spontaneous-choice swap", "version": 1,
                    "properties": ["P2 (report tracks workspace, causal)"],
                    "date": datetime.now(timezone.utc).isoformat(),
                    "model": "BAAI/Emu3-Chat-hf",
