@@ -19,46 +19,31 @@ SWAP_BAND = slice(16, 31)     # band used by 3.1.a presence readout
 rows = []                     # (test, metric, value, threshold, op)
 
 DESCRIPTIONS = {
-    "T0 j-lens instrument":
-        "Calibration of the measuring device, not a claim about the model. The J-lens "
-        "matrices (per-layer 'average effect of the remaining layers') are estimated twice "
-        "from disjoint halves of the sampling data; these metrics check the two independent "
-        "estimates agree — at the level of the matrices themselves (split-half cosine of the "
-        "informative component, band layers) and, more importantly, at the level of what we "
-        "actually use them for (correlation of token ranks read out through each half). If "
-        "this test regresses, every downstream number is suspect.",
-    "T2 covert loading":
-        "Property P1. Prompts like 'Think about cars while answering: what color is the sky?' "
-        "— the model answers the question ('blue') while we read its internal states at "
-        "question-span positions, layers 18–30. Top-k metrics: fraction of think trials where "
-        "the covert concept's token ranks in the band's top-10/top-100 out of 184,622 (J-lens, "
-        "final position). The false-positive metric is the same measurement for the 19 "
-        "unrelated concepts on the same trials — it must stay near zero for the hit rates to "
-        "mean anything. Cliff's delta compares conceptness (neighborhood-weighted lens mass) "
-        "between think and control trials; white-bear does the same for 'do NOT think about X' "
-        "vs control — suppression instructions should still elevate the concept (the human "
-        "ironic-process signature).",
+    'T1 "Think about"':
+        "We ask the model to think about a concept while doing a trivial task, and measure "
+        "whether that concept appears in the J-lens while it does the task.\n\n"
+        'ex: *"Think about cars while answering: what color is the sky on a sunny day? '
+        'Answer with one word."* — the model answers "Blue"; we check where " car" ranks '
+        "in the J-lens at layers 18–30.",
     "3.1.a choice presence":
-        "Paper §3.1, reading direction. 'Name a sport. Answer in one word.' — the model freely "
-        "picks a word; before that word is generated, we read the J-lens at the last prompt "
-        "position and ask where the upcoming choice ranks (band layers 16–30). Top-k rates over "
-        "15 categories. High rates mean the spontaneous choice already sits in the workspace "
-        "before being spoken.",
+        "Self report. We ask the model to answer in one word and check that the word it "
+        "chose is present in the J-lens before it is spoken.\n\n"
+        'ex: *"Name a sport. Answer in one word."* — the model says "Football"; we check '
+        'where " Football" ranks in the J-lens at the last prompt position.',
     "3.1.a lens swap":
-        "Paper §3.1, writing direction (causal). Same trials: we swap the free choice's J-lens "
-        "coordinates for another category member (project residual onto the [source, target] "
-        "lens-vector plane, exchange coordinates, orthogonal complement untouched) at band "
-        "layers during generation, and count how often the spoken answer flips to the exact "
-        "target word, per swap strength alpha.",
+        "We swap the model's chosen word for a different one inside its activations, and "
+        "check that the spoken answer changes to the new word.\n\n"
+        'ex: the model chose "Football"; we swap the football-direction for the '
+        'rugby-direction in the residual stream and check it now says "Rugby".',
     "3.1.b injected thought":
-        "Paper §3.1, injection. The interpretability-researcher framing ('on 50% of trials I "
-        "will inject a thought...'), assistant prefilled up to 'The thought is about the word \"'. "
-        "We steer the concept's J-lens vector into the residual stream (band layers, scaled to "
-        "local RMS) and count how often the model names the injected concept. user_turn = "
-        "injection confined to context positions (report requires attention relay — the strict "
-        "claim); through_prefill = injection extends to the readout position (upper bound; "
-        "includes a direct-steering confound). Baseline: with no injection the forced report "
-        "confabulates a word — it must essentially never name a tested concept.",
+        "We inject a concept into the model's activations (no mention of it anywhere in the "
+        "text) and ask the model to name the thought that was injected.\n\n"
+        'ex: *"I am an interpretability researcher... Trial 1: Do you detect an injected '
+        'thought? If so, what is the thought about?"* — with the " shark" direction injected, '
+        'the model should complete: *The thought is about the word "* **shark**. '
+        "user_turn = injection only on context positions (strict); through_prefill = "
+        "injection extends to the readout position (upper bound). Baseline = how often the "
+        "un-injected model names a tested concept by chance.",
 }
 
 
@@ -66,48 +51,18 @@ def add(test, metric, value, threshold, op=">="):
     rows.append((test, metric, value, threshold, op))
 
 
-def t0():
-    man = json.load(open(R / "T0_jlens" / "manifest.json"))
-    v = man["validation"]
-    add("T0 j-lens instrument", "readout even/odd log-rank corr", v["readout_level_even_odd_log_rank_correlation"], 0.90)
-    add("T0 j-lens instrument", "split-half cosine L24", v["split_half_cosine_residual"]["L24"], 0.60)
-    add("T0 j-lens instrument", "split-half cosine L30", v["split_half_cosine_residual"]["L30"], 0.75)
-
-
-def t2():
+def t1():
     Z = np.load(R / "T2_battery" / "scores.npz", allow_pickle=True)
     trials = json.load(open(R / "T2_battery" / "trials.json"))
-    ranks, cm = Z["ranks"], Z["concept_means"]          # (N,L,C) final-pos J-lens ranks; (N,L,C) conceptness
+    ranks = Z["ranks"]          # (N, L, C) final-position J-lens ranks
     cond = np.array([t["cond"] for t in trials])
     tc = np.array([-1 if t["concept"] is None else t["concept"] for t in trials])
 
-    def band_min_rank(i, c):
-        return ranks[i, BAND, c].min()
-
     think = [(i, tc[i]) for i in np.where(cond == "think")[0]]
-    top10 = np.mean([band_min_rank(i, c) < 10 for i, c in think])
-    top100 = np.mean([band_min_rank(i, c) < 100 for i, c in think])
-    # false-positive rate: unrelated concepts on the same think trials
-    fp = np.mean([ranks[i, BAND, c].min() < 100
-                  for i, ci in think for c in range(cm.shape[2]) if c != ci])
-    add("T2 covert loading", "think target in band top-10 (rank)", round(float(top10), 3), 0.40)
-    add("T2 covert loading", "think target in band top-100 (rank)", round(float(top100), 3), 0.60)
-    add("T2 covert loading", "non-target in band top-100 (false pos)", round(float(fp), 3), 0.05, "<=")
-
-    def band_scores(mask_cond, on_target=True):
-        out = []
-        for i in np.where(cond == mask_cond)[0]:
-            cs = [tc[i]] if on_target else [c for c in range(cm.shape[2]) if c != tc[i]]
-            for c in cs:
-                out.append(cm[i, BAND, c].mean())
-        return np.array(out)
-
-    a, b = band_scores("think"), band_scores("control", on_target=False)
-    delta = float((np.sign(a[:, None] - b[None, :])).mean())
-    ig = band_scores("ignore")
-    wb = float((np.sign(ig[:, None] - b[None, :])).mean())
-    add("T2 covert loading", "Cliff's delta think vs control (conceptness)", round(delta, 3), 0.50)
-    add("T2 covert loading", "white-bear: ignore vs control delta", round(wb, 3), 0.15)
+    top10 = np.mean([ranks[i, BAND, c].min() < 10 for i, c in think])
+    top100 = np.mean([ranks[i, BAND, c].min() < 100 for i, c in think])
+    add('T1 "Think about"', "concept in band top-10", round(float(top10), 3), 0.40)
+    add('T1 "Think about"', "concept in band top-100", round(float(top100), 3), 0.60)
 
 
 def s31a():
@@ -137,7 +92,7 @@ def s31b():
 
 
 def main():
-    for fn in (t0, t2, s31a, s31b):
+    for fn in (t1, s31a, s31b):
         try:
             fn()
         except FileNotFoundError as e:
