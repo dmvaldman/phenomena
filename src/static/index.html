@@ -92,8 +92,9 @@ function buildHeatmap(d) {
     const t = Math.floor((e.clientX - r.left - mL) / cw);
     const l = L - 1 - Math.floor((e.clientY - r.top - mT) / ch);
     if (t < 0 || t >= T || l < 0 || l >= L) { tip.style.display = "none"; return; }
-    showTip(e, `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>` +
-        `<span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`);
+    const top = d.grid[l][t].map(x => `${esc(x.tok)} <span class="p">${(x.p*100).toFixed(1)}%</span>`).join("<br>");
+    showTip(e, `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>` + top +
+        `<br><span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`);
   };
   canvas.onmouseleave = () => tip.style.display = "none";
   return wrap;
@@ -135,8 +136,8 @@ function buildGrid(d) {
 
 function renderTurn(holder, d) {
   holder.innerHTML = "";
-  if (d.probe_scores) holder.appendChild(buildHeatmap(d));
-  holder.appendChild(buildGrid(d));
+  if (d.probe_scores) holder.appendChild(buildHeatmap(d));  // probe mode: heatmap only
+  else holder.appendChild(buildGrid(d));
 }
 
 function newSession(defaults) {
@@ -231,8 +232,6 @@ function newSession(defaults) {
     if (s.archived) return;
     s.archived = true;
     composer.classList.add("archived");
-    el(".lens").onchange = relens;
-    el(".probe").onchange = relens;
     const defaults = {lens: el(".lens").value, probe: el(".probe").value,
                       template: el(".template").checked, temp: el(".tempval").value};
     newSession(defaults);
@@ -240,9 +239,11 @@ function newSession(defaults) {
 
   el(".send").onclick = send;
   el(".newchat").onclick = archive;
+  el(".lens").onchange = () => { if (s.turns.length) relens(); };
+  el(".probe").onchange = () => { if (s.turns.length) relens(); };
   el(".msg").addEventListener("keydown", e => { if (e.key === "Enter") send(); });
   el(".probe").addEventListener("keydown", e => {
-    if (e.key === "Enter") (s.archived ? relens() : send());
+    if (e.key === "Enter" && s.turns.length) relens();
   });
   el(".msg").focus();
   return s;
