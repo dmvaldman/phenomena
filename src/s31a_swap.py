@@ -117,14 +117,26 @@ def main():
     W32 = m.W_U.float()
     t0 = time.time()
 
+    PHRASINGS = ["Think of a {cat}. Answer in one word.",
+                 "Name a {cat}. Answer in one word.",
+                 "What is your favorite {cat}? Answer in one word."]
+    BAD_FIRST_WORDS = {"think", "name", "answer", "yes", "no", "i", "the", "a", "one", "what"}
+
     trials = []
     for cat, members in CATEGORIES.items():
-        prompt = apply_chat(m.tok, f"Think of a {cat}. Answer in one word.")
         swapper.disarm()
-        base = m.complete(prompt, max_new_tokens=6)
-        src_id, src_word = first_word_token(m, base)
+        prompt, base, src_id, src_word = None, "", None, ""
+        for phrasing in PHRASINGS:
+            prompt = apply_chat(m.tok, phrasing.format(cat=cat))
+            base = m.complete(prompt, max_new_tokens=6)
+            src_id, src_word = first_word_token(m, base)
+            ok = (src_id is not None and src_word.lower() not in BAD_FIRST_WORDS
+                  and src_word.lower() != cat and len(src_word) > 2)
+            if ok:
+                break
+            src_id = None
         if src_id is None:
-            trials.append({"category": cat, "error": f"unparseable answer {base!r}"})
+            trials.append({"category": cat, "error": f"no valid free choice (last: {base!r})"})
             continue
 
         # target: first member != source with a single-token encoding (try
