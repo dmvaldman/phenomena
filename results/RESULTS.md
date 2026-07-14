@@ -5,7 +5,7 @@ One row per target property (research_plan.md §1). "Evidence" links the experim
 | Property | Claim (short) | Status | Evidence | Finding |
 |---|---|---|---|---|
 | P1 | Covert concepts load into a readable subspace during unrelated tasks | **Established (text)** | [T2_battery_v0](T2_battery_v0/) → re-run as [T2_battery](T2_battery/) pending | Concept readable at layers ~22–30 on essentially every trial (rank ~100/184k vs ~46k control); white-bear and lexical controls behave as predicted; output never mentions it |
-| P2 | Model reports features of the covert content when asked | Anecdotal only | [_demos](_demos/) (chat: "what was on your mind?" → "cars") | Not yet controlled: word "cars" visible in context; needs T3 injection design |
+| P2 | Model reports features of the covert content when asked | Anecdotal only; **T3a swap built, awaiting pod** | [_demos](_demos/); src/t3_swap.py → results/T3_swap/ | "Think of a sport" → check the free choice sits in the band pre-answer, then swap its lens coordinates for another sport and see if the spoken answer follows (15 categories, α ∈ {1,2}) |
 | P3 | Small subspace is broadcast widely by attention | Anecdotal only | visualizer probe heatmaps | Concept readable across many positions in the band, unquantified; needs T6 |
 | P4 | Causal privilege of the workspace component | Untested | — | T5 |
 | P5 | Covert content is used by downstream reasoning (swaps flip answers) | Untested | — | T4 — next up; clears Phase 1 gate |
