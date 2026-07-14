@@ -164,7 +164,9 @@ function newSession(defaults) {
         probe: probeStr, template: turn.template, skip_tokens: turn.skip, reuse_reply: true});
       appendProbeBlock(turn, d, d.probe_token || probeStr);
       if (!turn.probes.includes(probeStr)) turn.probes.push(probeStr);
-      statusEl.textContent = "";
+      turn.wrap.scrollTop = turn.wrap.scrollHeight;   // reveal the new block
+      turn.wrap.scrollIntoView({behavior: "smooth", block: "nearest"});
+      statusEl.textContent = `added "${(d.probe_token || probeStr).trim()}"`;
     } catch (e) {
       statusEl.textContent = "error: " + e.message;
     }
