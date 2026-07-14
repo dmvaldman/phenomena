@@ -11,6 +11,9 @@
   .user { background: #dbe7ff; }
   .assistant { background: #e8e8e8; }
   .gridwrap { overflow: auto; max-height: 60vh; border: 1px solid #ddd; background: #fff; margin: 8px 0; }
+  .heatwrap { overflow-x: auto; border: 1px solid #ddd; background: #fff; margin: 8px 0; padding: 10px 6px 4px 6px; }
+  .heatwrap canvas { display: block; }
+  .heatlabel { font-size: 11px; color: #666; margin: 2px 0 0 44px; }
   table { border-collapse: collapse; font-size: 11px; }
   th, td { border: 1px solid #eee; padding: 2px 4px; white-space: nowrap; max-width: 86px;
            overflow: hidden; text-overflow: ellipsis; }
@@ -56,6 +59,56 @@ function scoreColor(v, vmax) {
   return `rgba(200, 40, 40, ${(0.04 + 0.86 * x).toFixed(3)})`;
 }
 function esc(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/ /g,"·"); }
+
+const VIRIDIS = [[68,1,84],[72,36,117],[65,68,135],[53,95,141],[42,120,142],[33,145,140],[34,168,132],[68,191,112],[122,209,81],[189,223,38],[253,231,37]];
+function viridis(t) {
+  t = Math.max(0, Math.min(1, t));
+  const x = t * (VIRIDIS.length - 1), i = Math.floor(x), f = x - i;
+  const a = VIRIDIS[i], b = VIRIDIS[Math.min(i + 1, VIRIDIS.length - 1)];
+  return `rgb(${Math.round(a[0]+f*(b[0]-a[0]))},${Math.round(a[1]+f*(b[1]-a[1]))},${Math.round(a[2]+f*(b[2]-a[2]))})`;
+}
+
+function addHeatmap(d) {
+  const L = d.n_layers, T = d.tokens.length, vmax = Math.max(...d.probe_scores.flat());
+  const cw = Math.max(12, Math.min(22, Math.floor(1000 / T))), ch = 10, mL = 44, mB = 26, mT = 6;
+  const wrap = document.createElement("div");
+  wrap.className = "heatwrap";
+  const canvas = document.createElement("canvas");
+  canvas.width = mL + T * cw + 8;
+  canvas.height = mT + L * ch + mB;
+  wrap.appendChild(canvas);
+  const lbl = document.createElement("div");
+  lbl.className = "heatlabel";
+  lbl.textContent = `probe "${d.probe_token}" conceptness — layer 0 (bottom) to ${L - 1} (top), color scaled to max ${vmax.toPrecision(2)}`;
+  wrap.appendChild(lbl);
+  $("chat").appendChild(wrap);
+
+  const ctx = canvas.getContext("2d");
+  for (let l = 0; l < L; l++)
+    for (let t = 0; t < T; t++) {
+      ctx.fillStyle = viridis(vmax > 0 ? d.probe_scores[l][t] / vmax : 0);
+      ctx.fillRect(mL + t * cw, mT + (L - 1 - l) * ch, cw - 1, ch - 1);
+    }
+  ctx.fillStyle = "#666"; ctx.font = "10px sans-serif"; ctx.textAlign = "right";
+  for (let l = 0; l < L; l += 8)
+    ctx.fillText(`L${l}`, mL - 5, mT + (L - 1 - l) * ch + ch);
+  ctx.textAlign = "center";
+  for (let t = 0; t < T; t += 5)
+    ctx.fillText(String(d.skip + t), mL + t * cw + cw / 2, mT + L * ch + 14);
+
+  canvas.onmousemove = e => {
+    const r = canvas.getBoundingClientRect();
+    const t = Math.floor((e.clientX - r.left - mL) / cw);
+    const l = L - 1 - Math.floor((e.clientY - r.top - mT) / ch);
+    if (t < 0 || t >= T || l < 0 || l >= L) { tip.style.display = "none"; return; }
+    tip.innerHTML = `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>` +
+        `<span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`;
+    tip.style.display = "block";
+    tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 220) + "px";
+    tip.style.top = Math.min(e.clientY + 14, window.innerHeight - 100) + "px";
+  };
+  canvas.onmouseleave = () => tip.style.display = "none";
+}
 
 function addBubble(role, text) {
   const div = document.createElement("div");
@@ -121,6 +174,7 @@ async function send() {
     });
     if (!r.ok) throw new Error(await r.text());
     const d = await r.json();
+    if (d.probe_scores) addHeatmap(d);
     addGrid(d);
     addBubble("assistant", d.reply);
     messages.push({role: "assistant", content: d.reply});
