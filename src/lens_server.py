@@ -46,6 +46,8 @@ class ChatRequest(BaseModel):
     topk: int = 5
     temperature: float = 0.7      # 0 = greedy
     seed: int | None = None       # set for reproducible sampling
+    reuse_reply: bool = False     # last message is an existing assistant reply:
+                                  # re-lens the transcript, no generation
     skip_tokens: int = 0          # columns already displayed by earlier turns
 
 
@@ -98,13 +100,21 @@ def grid_readout(text: str, n_prompt_tokens: int, lens: str, probe: str | None,
 
 @app.post("/api/chat")
 def api_chat(req: ChatRequest):
-    if req.template:
-        prompt = apply_chat(m.tok, req.messages)
+    seed = None
+    if req.reuse_reply:
+        assert req.messages and req.messages[-1]["role"] == "assistant"
+        reply = req.messages[-1]["content"]
+        msgs = req.messages[:-1]
     else:
-        prompt = "\n".join(msg["content"] for msg in req.messages)
-    seed = req.seed if req.seed is not None else int(torch.randint(0, 2**31, (1,)).item())
-    reply = m.complete(prompt, max_new_tokens=MAX_REPLY,
-                       temperature=req.temperature, seed=seed).strip()
+        msgs = req.messages
+    if req.template:
+        prompt = apply_chat(m.tok, msgs)
+    else:
+        prompt = "\n".join(msg["content"] for msg in msgs)
+    if not req.reuse_reply:
+        seed = req.seed if req.seed is not None else int(torch.randint(0, 2**31, (1,)).item())
+        reply = m.complete(prompt, max_new_tokens=MAX_REPLY,
+                           temperature=req.temperature, seed=seed).strip()
     full = prompt + " " + reply
     n_prompt = m.tok(prompt, return_tensors="pt").input_ids.shape[1]
     out = grid_readout(full, n_prompt, req.lens, req.probe or None, req.topk,

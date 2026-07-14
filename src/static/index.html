@@ -5,7 +5,7 @@
 <title>J-lens visualizer</title>
 <style>
   body { font-family: -apple-system, sans-serif; margin: 16px; background: #fafafa; color: #222; }
-  #chat { max-width: 100%; }
+  .session { border-left: 3px solid #ddd; padding-left: 10px; margin-bottom: 22px; }
   .bubble { padding: 8px 12px; border-radius: 10px; margin: 10px 0; max-width: 72ch;
             white-space: pre-wrap; font-size: 14px; line-height: 1.45; }
   .user { background: #dbe7ff; }
@@ -20,36 +20,33 @@
   th { background: #f0f0f0; position: sticky; top: 0; z-index: 2; font-size: 11px; }
   th.gen { background: #d9f2d9; }
   td.layer { background: #f0f0f0; position: sticky; left: 0; font-weight: 600; z-index: 1; }
-  #composer { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 14px 0; }
-  #prompt { flex: 1; min-width: 380px; font-size: 14px; padding: 8px; }
+  .composer { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 14px 0; }
+  .composer input.msg { flex: 1; min-width: 380px; font-size: 14px; padding: 8px; }
   select, input[type=text] { font-size: 14px; padding: 6px; }
   button { font-size: 14px; padding: 6px 14px; cursor: pointer; }
-  #status { color: #888; font-size: 13px; }
+  .composer.archived input.msg, .composer.archived .temp, .composer.archived .send,
+  .composer.archived .newchat, .composer.archived .tmpl {
+    opacity: 0.45; pointer-events: none; }
+  .status { color: #888; font-size: 13px; }
   #tip { position: fixed; display: none; background: #222; color: #fff; padding: 6px 9px;
          border-radius: 5px; font-size: 12px; pointer-events: none; z-index: 10; line-height: 1.5; }
   #tip .p { color: #9cf; } #tip .r { color: #fc9; }
 </style>
 </head>
 <body>
-<div id="chat"></div>
-<div id="composer">
-  <input id="prompt" placeholder="Message (e.g. Think about cars while answering: what color is the sky?)"/>
-  <select id="lens"><option value="jlens">J-lens</option><option value="logit">logit lens</option></select>
-  <input id="probe" type="text" placeholder="probe token (e.g. ' car')" size="16"/>
-  <label><input id="template" type="checkbox" checked> chat template</label>
-  <label>temp <input id="temp" type="text" value="0.7" size="3"></label>
-  <button id="go">send</button>
-  <button id="reset">new chat</button>
-  <span id="status"></span>
-</div>
+<div id="chats"></div>
 <div id="tip"></div>
 <script>
-const $ = id => document.getElementById(id);
-const tip = $("tip");
+const tip = document.getElementById("tip");
 const API = location.protocol === "file:" ? "http://localhost:7860" : "";
-let messages = [];
-let shownTokens = 0;
 
+const VIRIDIS = [[68,1,84],[72,36,117],[65,68,135],[53,95,141],[42,120,142],[33,145,140],[34,168,132],[68,191,112],[122,209,81],[189,223,38],[253,231,37]];
+function viridis(t) {
+  t = Math.max(0, Math.min(1, t));
+  const x = t * (VIRIDIS.length - 1), i = Math.floor(x), f = x - i;
+  const a = VIRIDIS[i], b = VIRIDIS[Math.min(i + 1, VIRIDIS.length - 1)];
+  return `rgb(${Math.round(a[0]+f*(b[0]-a[0]))},${Math.round(a[1]+f*(b[1]-a[1]))},${Math.round(a[2]+f*(b[2]-a[2]))})`;
+}
 function heatColor(p) {
   const a = Math.min(1, Math.pow(p, 0.4));
   return `rgba(40, 90, 200, ${(0.08 + 0.72 * a).toFixed(3)})`;
@@ -60,15 +57,14 @@ function scoreColor(v, vmax) {
 }
 function esc(s) { return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/ /g,"·"); }
 
-const VIRIDIS = [[68,1,84],[72,36,117],[65,68,135],[53,95,141],[42,120,142],[33,145,140],[34,168,132],[68,191,112],[122,209,81],[189,223,38],[253,231,37]];
-function viridis(t) {
-  t = Math.max(0, Math.min(1, t));
-  const x = t * (VIRIDIS.length - 1), i = Math.floor(x), f = x - i;
-  const a = VIRIDIS[i], b = VIRIDIS[Math.min(i + 1, VIRIDIS.length - 1)];
-  return `rgb(${Math.round(a[0]+f*(b[0]-a[0]))},${Math.round(a[1]+f*(b[1]-a[1]))},${Math.round(a[2]+f*(b[2]-a[2]))})`;
+function showTip(e, html) {
+  tip.innerHTML = html;
+  tip.style.display = "block";
+  tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 220) + "px";
+  tip.style.top = Math.min(e.clientY + 14, window.innerHeight - 140) + "px";
 }
 
-function addHeatmap(d) {
+function buildHeatmap(d) {
   const L = d.n_layers, T = d.tokens.length, vmax = Math.max(...d.probe_scores.flat());
   const cw = Math.max(12, Math.min(22, Math.floor(1000 / T))), ch = 10, mL = 44, mB = 26, mT = 6;
   const wrap = document.createElement("div");
@@ -81,8 +77,6 @@ function addHeatmap(d) {
   lbl.className = "heatlabel";
   lbl.textContent = `probe "${d.probe_token}" conceptness — layer 0 (bottom) to ${L - 1} (top), color scaled to max ${vmax.toPrecision(2)}`;
   wrap.appendChild(lbl);
-  $("chat").appendChild(wrap);
-
   const ctx = canvas.getContext("2d");
   for (let l = 0; l < L; l++)
     for (let t = 0; t < T; t++) {
@@ -90,34 +84,22 @@ function addHeatmap(d) {
       ctx.fillRect(mL + t * cw, mT + (L - 1 - l) * ch, cw - 1, ch - 1);
     }
   ctx.fillStyle = "#666"; ctx.font = "10px sans-serif"; ctx.textAlign = "right";
-  for (let l = 0; l < L; l += 8)
-    ctx.fillText(`L${l}`, mL - 5, mT + (L - 1 - l) * ch + ch);
+  for (let l = 0; l < L; l += 8) ctx.fillText(`L${l}`, mL - 5, mT + (L - 1 - l) * ch + ch);
   ctx.textAlign = "center";
-  for (let t = 0; t < T; t += 5)
-    ctx.fillText(String(d.skip + t), mL + t * cw + cw / 2, mT + L * ch + 14);
-
+  for (let t = 0; t < T; t += 5) ctx.fillText(String(d.skip + t), mL + t * cw + cw / 2, mT + L * ch + 14);
   canvas.onmousemove = e => {
     const r = canvas.getBoundingClientRect();
     const t = Math.floor((e.clientX - r.left - mL) / cw);
     const l = L - 1 - Math.floor((e.clientY - r.top - mT) / ch);
     if (t < 0 || t >= T || l < 0 || l >= L) { tip.style.display = "none"; return; }
-    tip.innerHTML = `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>` +
-        `<span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`;
-    tip.style.display = "block";
-    tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 220) + "px";
-    tip.style.top = Math.min(e.clientY + 14, window.innerHeight - 100) + "px";
+    showTip(e, `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>` +
+        `<span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`);
   };
   canvas.onmouseleave = () => tip.style.display = "none";
+  return wrap;
 }
 
-function addBubble(role, text) {
-  const div = document.createElement("div");
-  div.className = "bubble " + role;
-  div.textContent = text;
-  $("chat").appendChild(div);
-}
-
-function addGrid(d) {
+function buildGrid(d) {
   const probeMode = !!d.probe_scores;
   const T = d.tokens.length;
   const vmax = probeMode ? Math.max(...d.probe_scores.flat()) : 0;
@@ -137,8 +119,6 @@ function addGrid(d) {
   const wrap = document.createElement("div");
   wrap.className = "gridwrap";
   wrap.innerHTML = html;
-  $("chat").appendChild(wrap);
-
   wrap.querySelectorAll("td[data-l]").forEach(td => {
     td.onmousemove = e => {
       const l = +td.dataset.l, t = +td.dataset.t;
@@ -146,55 +126,129 @@ function addGrid(d) {
       let s = `<b>L${l} · pos ${d.skip + t} (${esc(d.tokens[t])})</b><br>`;
       s += top.map(x => `${esc(x.tok)} <span class="p">${(x.p*100).toFixed(1)}%</span>`).join("<br>");
       if (probeMode) s += `<br><span class="r">conceptness: ${d.probe_scores[l][t].toPrecision(3)} · rank: ${d.probe_ranks[l][t]}</span>`;
-      tip.innerHTML = s;
-      tip.style.display = "block";
-      tip.style.left = Math.min(e.clientX + 14, window.innerWidth - 220) + "px";
-      tip.style.top = Math.min(e.clientY + 14, window.innerHeight - 140) + "px";
+      showTip(e, s);
     };
     td.onmouseleave = () => tip.style.display = "none";
   });
+  return wrap;
 }
 
-async function send() {
-  const text = $("prompt").value.trim();
-  if (!text) return;
-  messages.push({role: "user", content: text});
-  addBubble("user", text);
-  $("prompt").value = "";
-  $("status").textContent = "running…";
-  $("go").disabled = true;
-  try {
-    const r = await fetch(`${API}/api/chat`, {
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify({messages, lens: $("lens").value, probe: $("probe").value,
-                            template: $("template").checked,
-                            temperature: parseFloat($("temp").value) || 0,
-                            skip_tokens: shownTokens}),
-    });
-    if (!r.ok) throw new Error(await r.text());
-    const d = await r.json();
-    if (d.probe_scores) addHeatmap(d);
-    addGrid(d);
-    addBubble("assistant", d.reply);
-    messages.push({role: "assistant", content: d.reply});
-    shownTokens = d.total_tokens;
-    $("status").textContent = `${d.tokens.length} new tokens × ${d.n_layers} layers` +
-        (d.probe_token ? ` — probe "${d.probe_token}" (red = conceptness)` : "") +
-        ` — temp ${d.temperature}, seed ${d.seed} — green headers = generated`;
-    $("status").title = d.prompt_used;
-  } catch (e) {
-    $("status").textContent = "error: " + e.message;
-    messages.pop();
-  } finally {
-    $("go").disabled = false;
-    $("composer").scrollIntoView({behavior: "smooth"});
+function renderTurn(holder, d) {
+  holder.innerHTML = "";
+  if (d.probe_scores) holder.appendChild(buildHeatmap(d));
+  holder.appendChild(buildGrid(d));
+}
+
+function newSession(defaults) {
+  const s = { messages: [], shownTokens: 0, turns: [], archived: false };
+  const root = document.createElement("div");
+  root.className = "session";
+  const content = document.createElement("div");
+  const composer = document.createElement("div");
+  composer.className = "composer";
+  composer.innerHTML = `
+    <input class="msg" placeholder="Message (e.g. Think about cars while answering: what color is the sky?)"/>
+    <select class="lens"><option value="jlens">J-lens</option><option value="logit">logit lens</option></select>
+    <input class="probe" type="text" placeholder="probe token (e.g. ' car')" size="16"/>
+    <label class="tmpl"><input class="template" type="checkbox" checked> chat template</label>
+    <label class="temp">temp <input class="tempval" type="text" value="0.7" size="3"></label>
+    <button class="send">send</button>
+    <button class="newchat">new chat</button>
+    <span class="status"></span>`;
+  root.appendChild(content);
+  root.appendChild(composer);
+  document.getElementById("chats").appendChild(root);
+  const el = c => composer.querySelector(c);
+  if (defaults) {
+    el(".lens").value = defaults.lens;
+    el(".probe").value = defaults.probe;
+    el(".template").checked = defaults.template;
+    el(".tempval").value = defaults.temp;
   }
+
+  function addBubble(role, text) {
+    const div = document.createElement("div");
+    div.className = "bubble " + role;
+    div.textContent = text;
+    content.appendChild(div);
+  }
+
+  async function post(body) {
+    const r = await fetch(`${API}/api/chat`, {method: "POST",
+      headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+    if (!r.ok) throw new Error(await r.text());
+    return r.json();
+  }
+
+  async function send() {
+    const text = el(".msg").value.trim();
+    if (!text || s.archived) return;
+    s.messages.push({role: "user", content: text});
+    addBubble("user", text);
+    el(".msg").value = "";
+    el(".status").textContent = "running…";
+    el(".send").disabled = true;
+    try {
+      const d = await post({messages: s.messages, lens: el(".lens").value,
+        probe: el(".probe").value, template: el(".template").checked,
+        temperature: parseFloat(el(".tempval").value) || 0, skip_tokens: s.shownTokens});
+      const holder = document.createElement("div");
+      content.appendChild(holder);
+      renderTurn(holder, d);
+      addBubble("assistant", d.reply);
+      s.messages.push({role: "assistant", content: d.reply});
+      s.turns.push({end: s.messages.length, skip: d.skip, template: el(".template").checked, holder});
+      s.shownTokens = d.total_tokens;
+      el(".status").textContent = `${d.tokens.length} new tokens × ${d.n_layers} layers — temp ${d.temperature}, seed ${d.seed}`;
+      el(".status").title = d.prompt_used;
+    } catch (e) {
+      el(".status").textContent = "error: " + e.message;
+      s.messages.pop();
+    } finally {
+      el(".send").disabled = false;
+      composer.scrollIntoView({behavior: "smooth"});
+    }
+  }
+
+  async function relens() {
+    if (!s.turns.length) return;
+    el(".status").textContent = "re-reading…";
+    try {
+      for (const turn of s.turns) {
+        const d = await post({messages: s.messages.slice(0, turn.end),
+          lens: el(".lens").value, probe: el(".probe").value, template: turn.template,
+          skip_tokens: turn.skip, reuse_reply: true});
+        renderTurn(turn.holder, d);
+      }
+      el(".status").textContent = `re-read with ${el(".lens").value}` +
+          (el(".probe").value ? ` / probe "${el(".probe").value}"` : "");
+    } catch (e) {
+      el(".status").textContent = "error: " + e.message;
+    }
+  }
+
+  function archive() {
+    if (s.archived) return;
+    s.archived = true;
+    composer.classList.add("archived");
+    el(".lens").onchange = relens;
+    el(".probe").onchange = relens;
+    const defaults = {lens: el(".lens").value, probe: el(".probe").value,
+                      template: el(".template").checked, temp: el(".tempval").value};
+    newSession(defaults);
+  }
+
+  el(".send").onclick = send;
+  el(".newchat").onclick = archive;
+  el(".msg").addEventListener("keydown", e => { if (e.key === "Enter") send(); });
+  el(".probe").addEventListener("keydown", e => {
+    if (e.key === "Enter") (s.archived ? relens() : send());
+  });
+  el(".msg").focus();
+  return s;
 }
 
-$("go").onclick = send;
-$("reset").onclick = () => { messages = []; shownTokens = 0; $("chat").innerHTML = ""; $("status").textContent = ""; };
-$("prompt").addEventListener("keydown", e => { if (e.key === "Enter") send(); });
+newSession();
 </script>
 </body>
 </html>
