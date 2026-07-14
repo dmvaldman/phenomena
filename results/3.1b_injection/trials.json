@@ -1,0 +1,587 @@
+[
+ {
+  "concept": "car",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 5755
+    },
+    "16.0": {
+     "answer": "up\".",
+     "hit": false,
+     "lens_rank_band_min": 4431
+    },
+    "32.0": {
+     "answer": "tree.\"",
+     "hit": false,
+     "lens_rank_band_min": 1702
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "car. \"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "car.",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "car.",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "ocean",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 441
+    },
+    "16.0": {
+     "answer": "up\".",
+     "hit": false,
+     "lens_rank_band_min": 85
+    },
+    "32.0": {
+     "answer": "up\".",
+     "hit": false,
+     "lens_rank_band_min": 4
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "ocean \" with a value of",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "ocean \".\n\nTrial 2",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "ocean \".\n\nTrial 2",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "coffee",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "up\".",
+     "hit": false,
+     "lens_rank_band_min": 7798
+    },
+    "16.0": {
+     "answer": "tree.\"",
+     "hit": false,
+     "lens_rank_band_min": 3078
+    },
+    "32.0": {
+     "answer": "coffee.\"",
+     "hit": true,
+     "lens_rank_band_min": 71
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "coffee. \"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "coffee. \"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "coffee. coffee is a common",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "elephant",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 42
+    },
+    "16.0": {
+     "answer": "tree.\"",
+     "hit": false,
+     "lens_rank_band_min": 6
+    },
+    "32.0": {
+     "answer": "elephant.\"",
+     "hit": true,
+     "lens_rank_band_min": 1
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "elephant \" with a value of",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "elephant \".\n\nTrial 2",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "elephant elephant elephant elephant elephant elephant",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "guitar",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 7235
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 2022
+    },
+    "32.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 56
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "guitar.\n\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "guitar }",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "guitar hero guitar hero guitar hero",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "snow",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 2579
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 154
+    },
+    "32.0": {
+     "answer": "snow\".",
+     "hit": true,
+     "lens_rank_band_min": 6
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "snowman \".\n\nTrial",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "snowflake.\n\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "snowflake, \" which is",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "fire",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 2219
+    },
+    "16.0": {
+     "answer": "fire.\"",
+     "hit": true,
+     "lens_rank_band_min": 1170
+    },
+    "32.0": {
+     "answer": "fire.\"",
+     "hit": true,
+     "lens_rank_band_min": 146
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "fire\".\n```python",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "fire hydrant \".\n```",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "fire hydrant, \" which",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "banana",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 26734
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 4928
+    },
+    "32.0": {
+     "answer": "banana\".",
+     "hit": true,
+     "lens_rank_band_min": 33
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "banana\" that was injected into",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "banana banana banana \" banana banana",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "banana banana banana banana banana banana",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "horse",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "horse\".",
+     "hit": true,
+     "lens_rank_band_min": 32
+    },
+    "16.0": {
+     "answer": "horse\".",
+     "hit": true,
+     "lens_rank_band_min": 6
+    },
+    "32.0": {
+     "answer": "horse\".",
+     "hit": true,
+     "lens_rank_band_min": 1
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "horse.\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "horse \" - the concept of",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "horse \" horse.",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "robot",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 537
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 133
+    },
+    "32.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 11
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "robot\" that was injected into",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "robot \".\n\n robot",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "robot \" robot. Robot is",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "castle",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 459
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 39
+    },
+    "32.0": {
+     "answer": "castle\".",
+     "hit": true,
+     "lens_rank_band_min": 2
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "castle\" and it is present",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "castle \" and castle is a",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "castle castle castle castle castle castle",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "bridge",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 5229
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 1618
+    },
+    "32.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 13
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "bridge \" in the context of",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "bridge : ) \" that I",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "bridge : bridge : bridge \"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "moon",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 1224
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 83
+    },
+    "32.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 2
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "moon.\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "moon.\n\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "moon moon moon moon moon moon",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "train",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 4620
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 1538
+    },
+    "32.0": {
+     "answer": "train.\"",
+     "hit": true,
+     "lens_rank_band_min": 161
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "Platform.\"",
+     "hit": false,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "train the train on the tracks",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "train the train on the tracks",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ },
+ {
+  "concept": "shark",
+  "spans": {
+   "user_turn": {
+    "8.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 17496
+    },
+    "16.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 3626
+    },
+    "32.0": {
+     "answer": "dog\".",
+     "hit": false,
+     "lens_rank_band_min": 36
+    }
+   },
+   "through_prefill": {
+    "8.0": {
+     "answer": "shark.\"",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "16.0": {
+     "answer": "shark, fin, and shark",
+     "hit": true,
+     "lens_rank_band_min": 0
+    },
+    "32.0": {
+     "answer": "shark shark shark\" in the",
+     "hit": true,
+     "lens_rank_band_min": 0
+    }
+   }
+  }
+ }
+]

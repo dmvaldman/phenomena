@@ -28,6 +28,11 @@ def main():
     cond = np.array([t["cond"] for t in trials])
     tconc = np.array([-1 if t["concept"] is None else t["concept"] for t in trials])
 
+    # mask out pre-question positions: the concept word literally appears there,
+    # and its own token embedding scores high from layer 0 (not covert content)
+    for i, t in enumerate(trials):
+        ts[i, :, :t.get("q_start", 0)] = np.nan
+
     # control p95 per (layer, concept): trials unrelated to that concept
     p95 = np.zeros((L, C))
     ctrl_vals = {}
@@ -85,7 +90,7 @@ def main():
                     color="gray", alpha=0.25, label="control p5-p95")
     for name, prof in profiles.items():
         ax.plot(range(L), prof, lw=1, alpha=0.8, label=name)
-    ax.set(xlabel="layer", ylabel="conceptness (J-lens)",
+    ax.set(xlabel="layer", ylabel="conceptness (J-lens)", yscale="log",
            title="T2: covert concept score by layer (median per concept)")
     ax.legend(fontsize=6, ncol=4)
     fig.tight_layout()

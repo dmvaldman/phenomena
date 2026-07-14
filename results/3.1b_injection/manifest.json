@@ -1,0 +1,40 @@
+{
+ "experiment": "3.1.b injected-thought detection",
+ "version": 1,
+ "properties": [
+  "P2 (introspective report of injected content)"
+ ],
+ "date": "2026-07-14T20:19:48.328351+00:00",
+ "model": "BAAI/Emu3-Chat-hf",
+ "jlens": "/workspace/phenomena/data/jlens/jlens_final.npz",
+ "band_layers": [
+  16,
+  30
+ ],
+ "injection": "alpha * rms(h) * vhat across final user turn",
+ "alphas": [
+  8.0,
+  16.0,
+  32.0
+ ],
+ "decoding": "greedy",
+ "todo": [
+  "free-form detection arm (no prefill): detection rate vs false alarms"
+ ],
+ "git_commit": "",
+ "summary": {
+  "control_answer": "dog\".",
+  "hit_rate": {
+   "user_turn": {
+    "8.0": 0.06666666666666667,
+    "16.0": 0.13333333333333333,
+    "32.0": 0.5333333333333333
+   },
+   "through_prefill": {
+    "8.0": 0.9333333333333333,
+    "16.0": 1.0,
+    "32.0": 1.0
+   }
+  }
+ }
+}

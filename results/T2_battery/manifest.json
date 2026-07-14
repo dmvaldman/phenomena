@@ -1,0 +1,21 @@
+{
+ "experiment": "T2_battery",
+ "version": 1,
+ "properties": [
+  "P1"
+ ],
+ "date": "2026-07-14T20:12:42.280133+00:00",
+ "model": "BAAI/Emu3-Chat-hf",
+ "jlens": {
+  "path": "/workspace/phenomena/data/jlens/jlens_final.npz",
+  "samples": 153600
+ },
+ "chat_template": "tokenizer",
+ "decoding": "greedy",
+ "metric": {
+  "name": "conceptness",
+  "sim_thresh": 0.25
+ },
+ "git_commit": "",
+ "n_trials": 505
+}

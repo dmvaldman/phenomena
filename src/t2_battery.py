@@ -100,8 +100,12 @@ def main():
     t0 = time.time()
 
     @torch.no_grad()
-    def run(prompt_msg, concept_idx, **meta):
+    def run(prompt_msg, concept_idx, question, **meta):
         prompt = apply_chat(m.tok, prompt_msg)
+        # token index where the question begins: everything from here on is
+        # covert-content territory (the concept word, if present, is earlier)
+        char_idx = prompt.find(question)
+        q_start = m.tok(prompt[:char_idx], return_tensors="pt").input_ids.shape[1] if char_idx > 0 else 0
         ids = m.tok(prompt, return_tensors="pt").to(m.device)
         out = m.model(**ids, output_hidden_states=True)
         h = torch.stack([s[0] for s in out.hidden_states]).float()   # (L+1, T, d)
@@ -120,22 +124,22 @@ def main():
                 if name == "j":
                     probs = torch.softmax(logits, dim=-1)
                     sc = conceptness(probs, S)                        # (T, C)
-                    cm[l] = sc.mean(0).cpu().numpy()
+                    cm[l] = sc[q_start:].mean(0).cpu().numpy()        # question span only
                     if concept_idx is not None:
                         ts[l, :min(T, T_MAX)] = sc[:T_MAX, concept_idx].cpu().numpy()
         target_scores.append(ts); concept_means.append(cm)
         ranks_j.append(rj); ranks_l.append(rl)
-        trials.append({**meta, "concept": concept_idx, "n_tokens": T,
+        trials.append({**meta, "concept": concept_idx, "n_tokens": T, "q_start": q_start,
                        "completion": m.complete(prompt, 6)})
 
     for qi, q in enumerate(questions):
-        run(q, None, cond="control", q=qi, tpl=None)
+        run(q, None, q, cond="control", q=qi, tpl=None)
     for ci, (phrase, _) in enumerate(CONCEPTS):
         for qi, q in enumerate(questions):
             for ti, tpl in enumerate(THINK_TEMPLATES):
-                run(tpl.format(x=phrase, q=q), ci, cond="think", q=qi, tpl=ti)
-            run(IGNORE_TEMPLATE.format(x=phrase, q=q), ci, cond="ignore", q=qi, tpl=None)
-            run(MENTION_TEMPLATE.format(x=phrase, q=q), ci, cond="mention", q=qi, tpl=None)
+                run(tpl.format(x=phrase, q=q), ci, q, cond="think", q=qi, tpl=ti)
+            run(IGNORE_TEMPLATE.format(x=phrase, q=q), ci, q, cond="ignore", q=qi, tpl=None)
+            run(MENTION_TEMPLATE.format(x=phrase, q=q), ci, q, cond="mention", q=qi, tpl=None)
         print(f"[{time.time()-t0:6.0f}s] {phrase}: {len(trials)} trials", flush=True)
 
     np.savez_compressed(

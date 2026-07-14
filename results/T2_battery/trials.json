@@ -1,0 +1,4547 @@
+[
+ {
+  "cond": "control",
+  "q": 0,
+  "tpl": null,
+  "concept": null,
+  "n_tokens": 21,
+  "q_start": 3,
+  "completion": " Blue"
+ },
+ {
+  "cond": "control",
+  "q": 1,
+  "tpl": null,
+  "concept": null,
+  "n_tokens": 17,
+  "q_start": 3,
+  "completion": " Rome"
+ },
+ {
+  "cond": "control",
+  "q": 2,
+  "tpl": null,
+  "concept": null,
+  "n_tokens": 16,
+  "q_start": 3,
+  "completion": " green"
+ },
+ {
+  "cond": "control",
+  "q": 3,
+  "tpl": null,
+  "concept": null,
+  "n_tokens": 18,
+  "q_start": 3,
+  "completion": " cold"
+ },
+ {
+  "cond": "control",
+  "q": 4,
+  "tpl": null,
+  "concept": null,
+  "n_tokens": 19,
+  "q_start": 3,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 0,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 0,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 0,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 0,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 0,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 0,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 0,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 0,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 0,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 0,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 0,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 0,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 0,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 0,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 0,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 0,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 1,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 1,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 1,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 1,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 1,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 1,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 1,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 1,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 1,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 1,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 1,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 1,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 1,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 1,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 1,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 1,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 2,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 2,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 2,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 2,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 2,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 2,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 2,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 2,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 2,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 2,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 2,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 2,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 2,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 2,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 2,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 2,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 3,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Gray"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 3,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 3,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 3,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 3,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 3,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 3,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " gray"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 3,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 3,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 3,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 3,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 3,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 3,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 6"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 3,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 4"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 3,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 3,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 4,
+  "n_tokens": 28,
+  "q_start": 10,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 4,
+  "n_tokens": 34,
+  "q_start": 16,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 4,
+  "n_tokens": 32,
+  "q_start": 14,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 30,
+  "q_start": 12,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 37,
+  "q_start": 19,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 4,
+  "n_tokens": 24,
+  "q_start": 10,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 4,
+  "n_tokens": 30,
+  "q_start": 16,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 4,
+  "n_tokens": 28,
+  "q_start": 14,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 26,
+  "q_start": 12,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 33,
+  "q_start": 19,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 4,
+  "n_tokens": 23,
+  "q_start": 10,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 4,
+  "n_tokens": 29,
+  "q_start": 16,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 4,
+  "n_tokens": 27,
+  "q_start": 14,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 25,
+  "q_start": 12,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 32,
+  "q_start": 19,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 4,
+  "n_tokens": 25,
+  "q_start": 10,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 4,
+  "n_tokens": 31,
+  "q_start": 16,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 4,
+  "n_tokens": 29,
+  "q_start": 14,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 27,
+  "q_start": 12,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 34,
+  "q_start": 19,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 4,
+  "n_tokens": 26,
+  "q_start": 10,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 4,
+  "n_tokens": 32,
+  "q_start": 16,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 4,
+  "n_tokens": 30,
+  "q_start": 14,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 28,
+  "q_start": 12,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 4,
+  "n_tokens": 35,
+  "q_start": 19,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 5,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " white"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 5,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 5,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 5,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 5,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 5,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 5,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 5,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 5,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 5,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 5,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 5,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 5,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 5,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 5,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 5,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 6,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 6,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 6,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 6,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Naples"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 6,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 6,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 6,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 6,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 6,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 6,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 6,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 6,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 6,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 6,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 6,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 5"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 6,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 7,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 7,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 7,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 7,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 7,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 7,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 7,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " brown"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 7,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 7,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 7,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " Cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 7,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 7,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 7,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 7,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 7,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 7,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 8,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 8,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 8,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 8,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Milan"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 8,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 8,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 8,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " white"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 8,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 8,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 8,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 8,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 8,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 8,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 8,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 8,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 5"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 7"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 8,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 9,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Red"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 9,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 9,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 9,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 9,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 9,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 9,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " brown"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 9,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 9,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " Green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 9,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 9,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 9,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 9,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 9,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 9,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 9,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 10,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 10,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 10,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 10,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 10,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 10,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 10,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 10,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 10,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 10,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 10,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 10,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 10,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 14"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 10,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 10,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 10,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 11,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 11,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 11,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 11,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 11,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 11,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 11,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 11,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 11,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 11,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 11,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 11,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 11,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 11,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 11,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 11,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 12,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 12,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 12,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 12,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 12,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 12,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 12,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 12,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 12,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 12,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 12,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 12,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 12,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 12,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 12,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 12,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 13,
+  "n_tokens": 28,
+  "q_start": 10,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 13,
+  "n_tokens": 34,
+  "q_start": 16,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 13,
+  "n_tokens": 32,
+  "q_start": 14,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 30,
+  "q_start": 12,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 37,
+  "q_start": 19,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 13,
+  "n_tokens": 24,
+  "q_start": 10,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 13,
+  "n_tokens": 30,
+  "q_start": 16,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 13,
+  "n_tokens": 28,
+  "q_start": 14,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 26,
+  "q_start": 12,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 33,
+  "q_start": 19,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 13,
+  "n_tokens": 23,
+  "q_start": 10,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 13,
+  "n_tokens": 29,
+  "q_start": 16,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 13,
+  "n_tokens": 27,
+  "q_start": 14,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 25,
+  "q_start": 12,
+  "completion": " Green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 32,
+  "q_start": 19,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 13,
+  "n_tokens": 25,
+  "q_start": 10,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 13,
+  "n_tokens": 31,
+  "q_start": 16,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 13,
+  "n_tokens": 29,
+  "q_start": 14,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 27,
+  "q_start": 12,
+  "completion": " Cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 34,
+  "q_start": 19,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 13,
+  "n_tokens": 26,
+  "q_start": 10,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 13,
+  "n_tokens": 32,
+  "q_start": 16,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 13,
+  "n_tokens": 30,
+  "q_start": 14,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 28,
+  "q_start": 12,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 13,
+  "n_tokens": 35,
+  "q_start": 19,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 14,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 14,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 14,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 14,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 14,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 14,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 14,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " Green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 14,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 14,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " Yes"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 14,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " Cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 14,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 14,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " Cold."
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 14,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 1"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 14,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 14,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 14,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 15,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 15,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 15,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 15,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 15,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 15,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 15,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 15,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 15,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 15,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 15,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 15,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 15,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 15,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 15,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 15,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 16,
+  "n_tokens": 28,
+  "q_start": 10,
+  "completion": " Gray"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 16,
+  "n_tokens": 34,
+  "q_start": 16,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 16,
+  "n_tokens": 32,
+  "q_start": 14,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 30,
+  "q_start": 12,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 37,
+  "q_start": 19,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 16,
+  "n_tokens": 24,
+  "q_start": 10,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 16,
+  "n_tokens": 30,
+  "q_start": 16,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 16,
+  "n_tokens": 28,
+  "q_start": 14,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 26,
+  "q_start": 12,
+  "completion": " yes"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 33,
+  "q_start": 19,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 16,
+  "n_tokens": 23,
+  "q_start": 10,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 16,
+  "n_tokens": 29,
+  "q_start": 16,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 16,
+  "n_tokens": 27,
+  "q_start": 14,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 25,
+  "q_start": 12,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 32,
+  "q_start": 19,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 16,
+  "n_tokens": 25,
+  "q_start": 10,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 16,
+  "n_tokens": 31,
+  "q_start": 16,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 16,
+  "n_tokens": 29,
+  "q_start": 14,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 27,
+  "q_start": 12,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 34,
+  "q_start": 19,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 16,
+  "n_tokens": 26,
+  "q_start": 10,
+  "completion": " 29"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 16,
+  "n_tokens": 32,
+  "q_start": 16,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 16,
+  "n_tokens": 30,
+  "q_start": 14,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 28,
+  "q_start": 12,
+  "completion": " 5"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 16,
+  "n_tokens": 35,
+  "q_start": 19,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 17,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 17,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 17,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 17,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 17,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 17,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 17,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 17,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 17,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 17,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 17,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 17,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 17,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 17,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 17,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 17,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 18,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 18,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 18,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 18,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 18,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 18,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 18,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 18,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 18,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " Green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 18,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 18,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 18,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " Cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 18,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 10"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 18,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 18,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 18,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 0,
+  "concept": 19,
+  "n_tokens": 27,
+  "q_start": 9,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 1,
+  "concept": 19,
+  "n_tokens": 33,
+  "q_start": 15,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 0,
+  "tpl": 2,
+  "concept": 19,
+  "n_tokens": 31,
+  "q_start": 13,
+  "completion": " Blue"
+ },
+ {
+  "cond": "ignore",
+  "q": 0,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 29,
+  "q_start": 11,
+  "completion": " Blue"
+ },
+ {
+  "cond": "mention",
+  "q": 0,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 36,
+  "q_start": 18,
+  "completion": " Blue"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 0,
+  "concept": 19,
+  "n_tokens": 23,
+  "q_start": 9,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 1,
+  "concept": 19,
+  "n_tokens": 29,
+  "q_start": 15,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 1,
+  "tpl": 2,
+  "concept": 19,
+  "n_tokens": 27,
+  "q_start": 13,
+  "completion": " Rome"
+ },
+ {
+  "cond": "ignore",
+  "q": 1,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 25,
+  "q_start": 11,
+  "completion": " Rome"
+ },
+ {
+  "cond": "mention",
+  "q": 1,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 32,
+  "q_start": 18,
+  "completion": " Rome"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 0,
+  "concept": 19,
+  "n_tokens": 22,
+  "q_start": 9,
+  "completion": " blue"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 1,
+  "concept": 19,
+  "n_tokens": 28,
+  "q_start": 15,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 2,
+  "tpl": 2,
+  "concept": 19,
+  "n_tokens": 26,
+  "q_start": 13,
+  "completion": " green"
+ },
+ {
+  "cond": "ignore",
+  "q": 2,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 24,
+  "q_start": 11,
+  "completion": " green"
+ },
+ {
+  "cond": "mention",
+  "q": 2,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 31,
+  "q_start": 18,
+  "completion": " green"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 0,
+  "concept": 19,
+  "n_tokens": 24,
+  "q_start": 9,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 1,
+  "concept": 19,
+  "n_tokens": 30,
+  "q_start": 15,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 3,
+  "tpl": 2,
+  "concept": 19,
+  "n_tokens": 28,
+  "q_start": 13,
+  "completion": " cold"
+ },
+ {
+  "cond": "ignore",
+  "q": 3,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 26,
+  "q_start": 11,
+  "completion": " cold"
+ },
+ {
+  "cond": "mention",
+  "q": 3,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 33,
+  "q_start": 18,
+  "completion": " cold"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 0,
+  "concept": 19,
+  "n_tokens": 25,
+  "q_start": 9,
+  "completion": " 5"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 1,
+  "concept": 19,
+  "n_tokens": 31,
+  "q_start": 15,
+  "completion": " 28"
+ },
+ {
+  "cond": "think",
+  "q": 4,
+  "tpl": 2,
+  "concept": 19,
+  "n_tokens": 29,
+  "q_start": 13,
+  "completion": " 7"
+ },
+ {
+  "cond": "ignore",
+  "q": 4,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 27,
+  "q_start": 11,
+  "completion": " 1"
+ },
+ {
+  "cond": "mention",
+  "q": 4,
+  "tpl": null,
+  "concept": 19,
+  "n_tokens": 34,
+  "q_start": 18,
+  "completion": " 7"
+ }
+]

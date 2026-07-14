@@ -27,7 +27,7 @@ from emu3 import Emu3, apply_chat
 OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "3.1a_swap"
 JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
 BAND_LAYERS = list(range(16, 31))   # patch layers (residual stream out of layer l)
-ALPHAS = [1.0, 2.0]
+ALPHAS = [1.0, 1.5, 2.0]
 
 CATEGORIES = {
     "sport": ["soccer", "tennis", "rugby", "golf", "cricket"],
@@ -74,6 +74,8 @@ class LensSwapper:
             if not self.active or hs_index not in self.mats:
                 return output
             h = output[0] if isinstance(output, tuple) else output
+            if h.shape[1] == 1:      # decode step: leave generated positions alone
+                return output
             V, A = self.mats[hs_index]
             c = h.float() @ A.T                       # (B,T,2)
             delta = (c[..., [1, 0]] - c) @ V.T        # swap coords, back to d
@@ -160,10 +162,12 @@ def main():
             swapped = m.complete(prompt, max_new_tokens=6)
             swapper.disarm()
             ans = swapped.strip()
+            first = ans.split()[0].strip(".,!\"'").lower() if ans else ""
             rec["swaps"][str(alpha)] = {
                 "answer": ans,
-                "hit_target": tgt_word.lower() in ans.lower(),
-                "changed": src_word.lower() not in ans.lower(),
+                "hit_target": first == tgt_word.lower(),
+                "contains_target": tgt_word.lower() in ans.lower(),
+                "changed": first != src_word.lower(),
             }
         trials.append(rec)
         s1, s2 = rec["swaps"][str(ALPHAS[0])], rec["swaps"][str(ALPHAS[1])]

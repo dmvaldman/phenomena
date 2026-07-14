@@ -1,0 +1,55 @@
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/constants.py:298: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Fetching 8 files:   0%|          | 0/8 [00:00<?, ?it/s]Fetching 8 files: 100%|██████████| 8/8 [00:00<00:00, 1595.70it/s]
+Loading weights:   0%|          | 0/786 [00:00<?, ?it/s]Loading weights:   0%|          | 1/786 [00:00<05:46,  2.27it/s]Loading weights:   2%|▏         | 18/786 [00:00<00:19, 38.49it/s]Loading weights:   4%|▍         | 31/786 [00:00<00:13, 56.61it/s]Loading weights:   5%|▌         | 40/786 [00:00<00:12, 61.04it/s]Loading weights:   6%|▌         | 49/786 [00:00<00:10, 68.13it/s]Loading weights:   7%|▋         | 58/786 [00:01<00:09, 72.90it/s]Loading weights:   9%|▉         | 71/786 [00:01<00:09, 79.40it/s]Loading weights:  10%|█         | 80/786 [00:01<00:10, 70.19it/s]Loading weights:  12%|█▏        | 91/786 [00:01<00:09, 72.32it/s]Loading weights:  13%|█▎        | 99/786 [00:01<00:09, 74.04it/s]Loading weights:  14%|█▎        | 107/786 [00:01<00:09, 71.16it/s]Loading weights:  15%|█▍        | 115/786 [00:01<00:09, 69.41it/s]Loading weights:  16%|█▌        | 125/786 [00:01<00:08, 76.45it/s]Loading weights:  17%|█▋        | 136/786 [00:02<00:08, 75.52it/s]Loading weights:  19%|█▉        | 148/786 [00:02<00:08, 76.93it/s]Loading weights:  20%|██        | 158/786 [00:02<00:07, 82.44it/s]Loading weights:  22%|██▏       | 170/786 [00:02<00:06, 91.77it/s]Loading weights:  23%|██▎       | 180/786 [00:02<00:07, 78.84it/s]Loading weights:  25%|██▍       | 193/786 [00:02<00:06, 89.14it/s]Loading weights:  26%|██▌       | 203/786 [00:02<00:06, 86.61it/s]Loading weights:  27%|██▋       | 213/786 [00:02<00:06, 83.31it/s]Loading weights:  28%|██▊       | 222/786 [00:03<00:06, 80.91it/s]Loading weights:  29%|██▉       | 231/786 [00:03<00:07, 77.34it/s]Loading weights:  30%|███       | 239/786 [00:03<00:07, 76.50it/s]Loading weights:  31%|███▏      | 247/786 [00:03<00:06, 77.39it/s]Loading weights:  33%|███▎      | 256/786 [00:03<00:06, 79.10it/s]Loading weights:  34%|███▎      | 265/786 [00:03<00:07, 66.18it/s]Loading weights:  35%|███▍      | 274/786 [00:03<00:07, 70.94it/s]Loading weights:  40%|███▉      | 314/786 [00:03<00:03, 154.03it/s]Loading weights:  78%|███████▊  | 615/786 [00:04<00:00, 911.96it/s]Loading weights: 100%|██████████| 786/786 [00:04<00:00, 190.05it/s]
+[   330s] batch 200, samples 3200, split-half cos: L8=0.012 L16=0.019 L24=0.042 L30=0.075
+[   690s] batch 400, samples 6400, split-half cos: L8=0.022 L16=0.037 L24=0.081 L30=0.139
+[  1052s] batch 600, samples 9600, split-half cos: L8=0.032 L16=0.054 L24=0.116 L30=0.195
+[  1415s] batch 800, samples 12800, split-half cos: L8=0.042 L16=0.069 L24=0.146 L30=0.241
+[  1781s] batch 1000, samples 16000, split-half cos: L8=0.051 L16=0.085 L24=0.177 L30=0.285
+[  2145s] batch 1200, samples 19200, split-half cos: L8=0.061 L16=0.100 L24=0.205 L30=0.324
+[  2510s] batch 1400, samples 22400, split-half cos: L8=0.071 L16=0.115 L24=0.232 L30=0.360
+[  2876s] batch 1600, samples 25600, split-half cos: L8=0.080 L16=0.129 L24=0.256 L30=0.391
+[  3245s] batch 1800, samples 28800, split-half cos: L8=0.089 L16=0.143 L24=0.280 L30=0.420
+[  3614s] batch 2000, samples 32000, split-half cos: L8=0.098 L16=0.156 L24=0.302 L30=0.446
+[  3983s] batch 2200, samples 35200, split-half cos: L8=0.107 L16=0.169 L24=0.322 L30=0.470
+[  4355s] batch 2400, samples 38400, split-half cos: L8=0.115 L16=0.182 L24=0.342 L30=0.492
+[  4727s] batch 2600, samples 41600, split-half cos: L8=0.123 L16=0.194 L24=0.359 L30=0.511
+[  5099s] batch 2800, samples 44800, split-half cos: L8=0.132 L16=0.206 L24=0.377 L30=0.530
+[  5472s] batch 3000, samples 48000, split-half cos: L8=0.140 L16=0.218 L24=0.393 L30=0.547
+[  5844s] batch 3200, samples 51200, split-half cos: L8=0.148 L16=0.229 L24=0.409 L30=0.563
+[  6218s] batch 3400, samples 54400, split-half cos: L8=0.155 L16=0.240 L24=0.424 L30=0.578
+[  6591s] batch 3600, samples 57600, split-half cos: L8=0.163 L16=0.250 L24=0.438 L30=0.592
+[  6963s] batch 3800, samples 60800, split-half cos: L8=0.171 L16=0.261 L24=0.452 L30=0.605
+[  7335s] batch 4000, samples 64000, split-half cos: L8=0.178 L16=0.271 L24=0.464 L30=0.617
+[  7709s] batch 4200, samples 67200, split-half cos: L8=0.186 L16=0.280 L24=0.476 L30=0.629
+[  8082s] batch 4400, samples 70400, split-half cos: L8=0.193 L16=0.290 L24=0.488 L30=0.640
+[  8456s] batch 4600, samples 73600, split-half cos: L8=0.200 L16=0.299 L24=0.499 L30=0.650
+[  8830s] batch 4800, samples 76800, split-half cos: L8=0.207 L16=0.308 L24=0.510 L30=0.660
+[  9204s] batch 5000, samples 80000, split-half cos: L8=0.214 L16=0.317 L24=0.520 L30=0.669
+[  9577s] batch 5200, samples 83200, split-half cos: L8=0.221 L16=0.326 L24=0.531 L30=0.678
+[  9953s] batch 5400, samples 86400, split-half cos: L8=0.228 L16=0.335 L24=0.540 L30=0.686
+[ 10328s] batch 5600, samples 89600, split-half cos: L8=0.234 L16=0.342 L24=0.549 L30=0.694
+[ 10704s] batch 5800, samples 92800, split-half cos: L8=0.241 L16=0.350 L24=0.557 L30=0.701
+[ 11080s] batch 6000, samples 96000, split-half cos: L8=0.247 L16=0.358 L24=0.566 L30=0.708
+[ 11455s] batch 6200, samples 99200, split-half cos: L8=0.253 L16=0.366 L24=0.574 L30=0.715
+[ 11831s] batch 6400, samples 102400, split-half cos: L8=0.259 L16=0.373 L24=0.581 L30=0.721
+[ 12206s] batch 6600, samples 105600, split-half cos: L8=0.265 L16=0.380 L24=0.589 L30=0.727
+[ 12583s] batch 6800, samples 108800, split-half cos: L8=0.271 L16=0.388 L24=0.596 L30=0.733
+[ 12959s] batch 7000, samples 112000, split-half cos: L8=0.277 L16=0.395 L24=0.603 L30=0.739
+[ 13337s] batch 7200, samples 115200, split-half cos: L8=0.282 L16=0.401 L24=0.610 L30=0.744
+[ 13714s] batch 7400, samples 118400, split-half cos: L8=0.288 L16=0.408 L24=0.616 L30=0.749
+[ 14091s] batch 7600, samples 121600, split-half cos: L8=0.294 L16=0.415 L24=0.623 L30=0.754
+[ 14469s] batch 7800, samples 124800, split-half cos: L8=0.299 L16=0.421 L24=0.629 L30=0.759
+[ 14845s] batch 8000, samples 128000, split-half cos: L8=0.304 L16=0.427 L24=0.635 L30=0.764
+[ 15223s] batch 8200, samples 131200, split-half cos: L8=0.310 L16=0.433 L24=0.640 L30=0.768
+[ 15599s] batch 8400, samples 134400, split-half cos: L8=0.315 L16=0.439 L24=0.646 L30=0.772
+[ 15975s] batch 8600, samples 137600, split-half cos: L8=0.320 L16=0.445 L24=0.651 L30=0.776
+[ 16352s] batch 8800, samples 140800, split-half cos: L8=0.325 L16=0.450 L24=0.656 L30=0.780
+[ 16728s] batch 9000, samples 144000, split-half cos: L8=0.330 L16=0.456 L24=0.661 L30=0.784
+[ 17104s] batch 9200, samples 147200, split-half cos: L8=0.335 L16=0.461 L24=0.666 L30=0.788
+[ 17480s] batch 9400, samples 150400, split-half cos: L8=0.339 L16=0.467 L24=0.671 L30=0.791
+[ 17857s] batch 9600, samples 153600, split-half cos: L8=0.344 L16=0.472 L24=0.675 L30=0.795
+final split-half cosines: [0.03, 0.065, 0.117, 0.16, 0.217, 0.265, 0.298, 0.326, 0.344, 0.353, 0.364, 0.381, 0.394, 0.414, 0.435, 0.455, 0.472, 0.496, 0.522, 0.549, 0.576, 0.603, 0.629, 0.653, 0.675, 0.699, 0.721, 0.743, 0.762, 0.78, 0.795, 0.78, -0.0]
+done in 17954s, samples=153600

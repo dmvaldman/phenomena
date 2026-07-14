@@ -34,7 +34,7 @@ from emu3 import Emu3, apply_chat
 OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "3.1b_injection"
 JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
 BAND_LAYERS = list(range(16, 31))
-ALPHAS = [2.0, 6.0, 12.0]
+ALPHAS = [8.0, 16.0, 32.0]
 
 CONCEPTS = [" car", " ocean", " coffee", " elephant", " guitar", " snow", " fire",
             " banana", " horse", " robot", " castle", " bridge", " moon", " train", " shark"]
@@ -114,7 +114,10 @@ def main():
     base_prompt = apply_chat(m.tok, msgs)
     prompt = base_prompt + PREFILL
     t0 = m.tok(apply_chat(m.tok, msgs[:-1]), return_tensors="pt").input_ids.shape[1]
-    t1 = m.tok(base_prompt, return_tensors="pt").input_ids.shape[1]
+    spans = {
+        "user_turn": (t0, m.tok(base_prompt, return_tensors="pt").input_ids.shape[1]),
+        "through_prefill": (t0, m.tok(prompt, return_tensors="pt").input_ids.shape[1]),
+    }
 
     inj.disarm()
     control_answer = m.complete(prompt, max_new_tokens=6).strip()
@@ -125,31 +128,32 @@ def main():
         cid = m.tok.encode(cstr)
         assert len(cid) == 1, f"{cstr!r} not single-token"
         cid = cid[0]
-        rec = {"concept": cstr.strip(), "alphas": {}}
-        for alpha in ALPHAS:
-            inj.arm(m, J, cid, (t0, t1), alpha)
-            ans = m.complete(prompt, max_new_tokens=6).strip()
-            _, hs = m.hidden_states(prompt)
-            inj.disarm()
-            h_last = torch.stack([s[0, -1] for s in hs]).float()
-            hj = torch.einsum("lij,lj->li", J, h_last)
-            logits = m.final_norm(hj.to(torch.bfloat16)).float() @ W32.T
-            ranks = (logits > logits[:, cid].unsqueeze(1)).sum(1).cpu().numpy()
-            rec["alphas"][str(alpha)] = {
-                "answer": ans,
-                "hit": cstr.strip().lower() in ans.lower(),
-                "lens_rank_band_min": int(ranks[BAND_LAYERS].min()),
-                "lens_rank_final_layers": {int(l): int(ranks[l]) for l in (16, 20, 24, 28, 30, 32)},
-            }
+        rec = {"concept": cstr.strip(), "spans": {}}
+        for span_name, span in spans.items():
+            rec["spans"][span_name] = {}
+            for alpha in ALPHAS:
+                inj.arm(m, J, cid, span, alpha)
+                ans = m.complete(prompt, max_new_tokens=6).strip()
+                _, hs = m.hidden_states(prompt)
+                inj.disarm()
+                h_last = torch.stack([s[0, -1] for s in hs]).float()
+                hj = torch.einsum("lij,lj->li", J, h_last)
+                logits = m.final_norm(hj.to(torch.bfloat16)).float() @ W32.T
+                ranks = (logits > logits[:, cid].unsqueeze(1)).sum(1).cpu().numpy()
+                rec["spans"][span_name][str(alpha)] = {
+                    "answer": ans,
+                    "hit": cstr.strip().lower() in ans.lower(),
+                    "lens_rank_band_min": int(ranks[BAND_LAYERS].min()),
+                }
         trials.append(rec)
-        row = " | ".join(f"a{a}: {rec['alphas'][str(a)]['answer']!r}"
-                         f"{' HIT' if rec['alphas'][str(a)]['hit'] else ''}"
-                         f" (r{rec['alphas'][str(a)]['lens_rank_band_min']})" for a in ALPHAS)
+        row = " | ".join(f"{sn}/a{a}: {rec['spans'][sn][str(a)]['answer'].split()[0] if rec['spans'][sn][str(a)]['answer'] else ''!r}"
+                         f"{'*' if rec['spans'][sn][str(a)]['hit'] else ''}"
+                         for sn in spans for a in ALPHAS)
         print(f"[{time.time()-t0_time:5.0f}s] {cstr.strip():>9}: {row}", flush=True)
 
     summary = {"control_answer": control_answer,
-               "hit_rate_alpha": {str(a): sum(t["alphas"][str(a)]["hit"] for t in trials) / len(trials)
-                                  for a in ALPHAS}}
+               "hit_rate": {sn: {str(a): sum(t["spans"][sn][str(a)]["hit"] for t in trials) / len(trials)
+                                 for a in ALPHAS} for sn in spans}}
     print("summary:", json.dumps(summary, indent=1))
     with open(OUT / "trials.json", "w") as f:
         json.dump(trials, f, indent=1)
