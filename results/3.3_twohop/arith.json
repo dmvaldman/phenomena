@@ -1,0 +1,41 @@
+[
+ {
+  "expr": "( 4 + 17 ) * 2 + 7 =",
+  "values": [
+   "21",
+   "42",
+   "49"
+  ],
+  "vetted": false,
+  "answer": "The final answer is 42."
+ },
+ {
+  "expr": "( 3 + 8 ) * 4 - 2 =",
+  "values": [
+   "11",
+   "44",
+   "42"
+  ],
+  "vetted": false,
+  "answer": "The final answer is 24."
+ },
+ {
+  "expr": "( 9 + 6 ) * 3 =",
+  "values": [
+   "15",
+   "45"
+  ],
+  "vetted": false,
+  "answer": "The final answer is 21."
+ },
+ {
+  "expr": "( 5 + 5 ) * 7 + 1 =",
+  "values": [
+   "10",
+   "70",
+   "71"
+  ],
+  "vetted": false,
+  "answer": "The final answer is 55."
+ }
+]
