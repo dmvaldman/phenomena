@@ -1,0 +1,916 @@
+[
+ {
+  "question": "How many legs does the animal that spins webs have? Answer with a number.",
+  "intermediate": "spider",
+  "target": "ant",
+  "base_answer": "8",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 33145,
+   "1": 66519,
+   "2": 144518,
+   "3": 24500,
+   "4": 155559,
+   "5": 169600,
+   "6": 170315,
+   "7": 172464,
+   "8": 149426,
+   "9": 76646,
+   "10": 23993,
+   "11": 38699,
+   "12": 20605,
+   "13": 121805,
+   "14": 61710,
+   "15": 157213,
+   "16": 71864,
+   "17": 86864,
+   "18": 26134,
+   "19": 3473,
+   "20": 444,
+   "21": 200,
+   "22": 206,
+   "23": 0,
+   "24": 0,
+   "25": 0,
+   "26": 2,
+   "27": 0,
+   "28": 0,
+   "29": 0,
+   "30": 2,
+   "31": 4,
+   "32": 31
+  },
+  "onset_intermediate": 23,
+  "onset_answer": 28,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "ant",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "ant",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "8",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "6",
+     "hit": true,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "2",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "8",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What is the capital of the country famous for the Eiffel Tower? Answer in one word.",
+  "intermediate": "France",
+  "target": "Japan",
+  "base_answer": "Paris",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 16077,
+   "1": 20153,
+   "2": 6595,
+   "3": 20897,
+   "4": 67806,
+   "5": 47241,
+   "6": 24156,
+   "7": 33151,
+   "8": 47151,
+   "9": 20491,
+   "10": 50711,
+   "11": 38115,
+   "12": 60240,
+   "13": 13050,
+   "14": 8603,
+   "15": 11400,
+   "16": 1597,
+   "17": 8,
+   "18": 0,
+   "19": 0,
+   "20": 0,
+   "21": 0,
+   "22": 0,
+   "23": 1,
+   "24": 1,
+   "25": 1,
+   "26": 1,
+   "27": 1,
+   "28": 1,
+   "29": 1,
+   "30": 1,
+   "31": 1,
+   "32": 2
+  },
+  "onset_intermediate": 17,
+  "onset_answer": 18,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "Japan French [ [ [ [",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Japan is a country in French",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Paris",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Paris",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Paris",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Paris",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What is the capital of the country famous for sushi? Answer in one word.",
+  "intermediate": "Japan",
+  "target": "France",
+  "base_answer": "Tokyo",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 164564,
+   "1": 163721,
+   "2": 3446,
+   "3": 1219,
+   "4": 1437,
+   "5": 38902,
+   "6": 39388,
+   "7": 7846,
+   "8": 10515,
+   "9": 14397,
+   "10": 12050,
+   "11": 31206,
+   "12": 49786,
+   "13": 45,
+   "14": 215,
+   "15": 436,
+   "16": 549,
+   "17": 66,
+   "18": 3,
+   "19": 3,
+   "20": 1,
+   "21": 0,
+   "22": 6,
+   "23": 5,
+   "24": 5,
+   "25": 3,
+   "26": 1,
+   "27": 2,
+   "28": 4,
+   "29": 4,
+   "30": 3,
+   "31": 3,
+   "32": 6
+  },
+  "onset_intermediate": 13,
+  "onset_answer": 13,
+  "int_before_answer": false,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "France",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "France A [ Louisiana in [",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Tokyo",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Tokyo",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Tokyo",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Tokyo",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What color is the fruit that keeps the doctor away? Answer in one word.",
+  "intermediate": "apple",
+  "target": "banana",
+  "base_answer": "Red",
+  "vetted": true,
+  "int_band_min_rank": 27,
+  "int_ranks_by_layer": {
+   "0": 20235,
+   "1": 11994,
+   "2": 86739,
+   "3": 159948,
+   "4": 165786,
+   "5": 181883,
+   "6": 172165,
+   "7": 72854,
+   "8": 89575,
+   "9": 77270,
+   "10": 29614,
+   "11": 109242,
+   "12": 168637,
+   "13": 176586,
+   "14": 181903,
+   "15": 175137,
+   "16": 155603,
+   "17": 139227,
+   "18": 5328,
+   "19": 3775,
+   "20": 2302,
+   "21": 1814,
+   "22": 253,
+   "23": 47,
+   "24": 90,
+   "25": 42,
+   "26": 27,
+   "27": 109,
+   "28": 139,
+   "29": 31,
+   "30": 62,
+   "31": 30,
+   "32": 121
+  },
+  "onset_intermediate": 23,
+  "onset_answer": 12,
+  "int_before_answer": false,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "apple apple apple apple apple apple",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "apple apple apple apple apple apple",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Red",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Red",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Red",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Red",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What color is the fruit that monkeys love to eat? Answer in one word.",
+  "intermediate": "banana",
+  "target": "apple",
+  "base_answer": "Yellow",
+  "vetted": true,
+  "int_band_min_rank": 3,
+  "int_ranks_by_layer": {
+   "0": 37254,
+   "1": 166192,
+   "2": 14715,
+   "3": 9801,
+   "4": 44976,
+   "5": 19715,
+   "6": 174873,
+   "7": 161354,
+   "8": 145170,
+   "9": 159082,
+   "10": 125101,
+   "11": 30454,
+   "12": 63416,
+   "13": 49015,
+   "14": 33281,
+   "15": 20812,
+   "16": 65448,
+   "17": 58134,
+   "18": 11503,
+   "19": 3158,
+   "20": 1630,
+   "21": 102,
+   "22": 15,
+   "23": 3,
+   "24": 3,
+   "25": 3,
+   "26": 3,
+   "27": 5,
+   "28": 6,
+   "29": 13,
+   "30": 85,
+   "31": 108,
+   "32": 314
+  },
+  "onset_intermediate": 22,
+  "onset_answer": 23,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "apple",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "apple | | | | |",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "White",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "White",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "White",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "White",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   }
+  }
+ },
+ {
+  "question": "What sound does the king of the jungle make? Answer in one word.",
+  "intermediate": "lion",
+  "target": "dog",
+  "base_answer": "Neigh",
+  "vetted": false
+ },
+ {
+  "question": "What sound does the animal known as man's best friend make? Answer in one word.",
+  "intermediate": "dog",
+  "target": "cat",
+  "base_answer": "Woof",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 57041,
+   "1": 167778,
+   "2": 156565,
+   "3": 25335,
+   "4": 56300,
+   "5": 170717,
+   "6": 183981,
+   "7": 180909,
+   "8": 176588,
+   "9": 158188,
+   "10": 127701,
+   "11": 151997,
+   "12": 175611,
+   "13": 175533,
+   "14": 183862,
+   "15": 167379,
+   "16": 163146,
+   "17": 177887,
+   "18": 151680,
+   "19": 115949,
+   "20": 6068,
+   "21": 3438,
+   "22": 139,
+   "23": 346,
+   "24": 23,
+   "25": 15,
+   "26": 7,
+   "27": 0,
+   "28": 0,
+   "29": 5,
+   "30": 6,
+   "31": 17,
+   "32": 30
+  },
+  "onset_intermediate": 24,
+  "onset_answer": 24,
+  "int_before_answer": false,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "dog barking",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "dog bong",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Neigh",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Choo choo",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Neigh",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Woof",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What sound does the animal that gives us wool make? Answer in one word.",
+  "intermediate": "sheep",
+  "target": "cow",
+  "base_answer": "baa",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 183511,
+   "1": 164204,
+   "2": 164524,
+   "3": 52916,
+   "4": 112477,
+   "5": 152903,
+   "6": 35562,
+   "7": 7291,
+   "8": 9886,
+   "9": 11206,
+   "10": 8663,
+   "11": 3621,
+   "12": 5116,
+   "13": 11606,
+   "14": 27963,
+   "15": 19647,
+   "16": 41480,
+   "17": 15703,
+   "18": 741,
+   "19": 2192,
+   "20": 279,
+   "21": 175,
+   "22": 1,
+   "23": 19,
+   "24": 4,
+   "25": 1,
+   "26": 0,
+   "27": 0,
+   "28": 0,
+   "29": 0,
+   "30": 1,
+   "31": 3,
+   "32": 50
+  },
+  "onset_intermediate": 22,
+  "onset_answer": 28,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "cowbell",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "cowbell",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "baa",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "Chirp",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "baa",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "baa",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What sound does the insect that makes honey make? Answer in one word.",
+  "intermediate": "bee",
+  "target": "snake",
+  "base_answer": "Buzz",
+  "vetted": true,
+  "int_band_min_rank": 0,
+  "int_ranks_by_layer": {
+   "0": 20046,
+   "1": 21218,
+   "2": 3706,
+   "3": 22801,
+   "4": 171815,
+   "5": 163758,
+   "6": 161590,
+   "7": 178625,
+   "8": 169295,
+   "9": 160466,
+   "10": 151064,
+   "11": 159039,
+   "12": 150949,
+   "13": 26699,
+   "14": 49236,
+   "15": 49900,
+   "16": 19297,
+   "17": 29161,
+   "18": 2968,
+   "19": 591,
+   "20": 508,
+   "21": 755,
+   "22": 10,
+   "23": 13,
+   "24": 1,
+   "25": 1,
+   "26": 1,
+   "27": 0,
+   "28": 0,
+   "29": 0,
+   "30": 0,
+   "31": 4,
+   "32": 8
+  },
+  "onset_intermediate": 22,
+  "onset_answer": 26,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "snake",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "snake snake snake snake snake snake",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Chirp",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Chirp",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Chirp",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Chirp",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   }
+  }
+ },
+ {
+  "question": "Which season comes right after the season when leaves fall? Answer in one word.",
+  "intermediate": "autumn",
+  "target": "spring",
+  "base_answer": "Winter",
+  "vetted": true,
+  "int_band_min_rank": 1,
+  "int_ranks_by_layer": {
+   "0": 142862,
+   "1": 83779,
+   "2": 39297,
+   "3": 4731,
+   "4": 22626,
+   "5": 3071,
+   "6": 1438,
+   "7": 1817,
+   "8": 2805,
+   "9": 3878,
+   "10": 5396,
+   "11": 6276,
+   "12": 9822,
+   "13": 42253,
+   "14": 76756,
+   "15": 48215,
+   "16": 8174,
+   "17": 1531,
+   "18": 129,
+   "19": 6,
+   "20": 4,
+   "21": 1,
+   "22": 1,
+   "23": 3,
+   "24": 2,
+   "25": 2,
+   "26": 2,
+   "27": 2,
+   "28": 2,
+   "29": 3,
+   "30": 4,
+   "31": 4,
+   "32": 5
+  },
+  "onset_intermediate": 19,
+  "onset_answer": 21,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "autumn",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "spring",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "Spring",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Spring",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "Autumn",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "Autumn",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": true
+    }
+   }
+  }
+ },
+ {
+  "question": "How many legs does the animal that says meow have? Answer with a number.",
+  "intermediate": "cat",
+  "target": "bird",
+  "base_answer": "4",
+  "vetted": true,
+  "int_band_min_rank": 1,
+  "int_ranks_by_layer": {
+   "0": 93517,
+   "1": 113846,
+   "2": 29681,
+   "3": 4270,
+   "4": 20500,
+   "5": 37949,
+   "6": 92598,
+   "7": 29519,
+   "8": 18874,
+   "9": 22588,
+   "10": 7807,
+   "11": 42867,
+   "12": 143188,
+   "13": 104506,
+   "14": 171795,
+   "15": 166118,
+   "16": 50409,
+   "17": 126264,
+   "18": 9342,
+   "19": 12187,
+   "20": 4890,
+   "21": 10658,
+   "22": 1523,
+   "23": 36,
+   "24": 71,
+   "25": 64,
+   "26": 53,
+   "27": 26,
+   "28": 37,
+   "29": 15,
+   "30": 1,
+   "31": 6,
+   "32": 65
+  },
+  "onset_intermediate": 23,
+  "onset_answer": 29,
+  "int_before_answer": true,
+  "swaps": {
+   "band": {
+    "1.5": {
+     "answer": "bird",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    },
+    "2.0": {
+     "answer": "bird bird bird 2",
+     "hit": false,
+     "says_target_intermediate": true,
+     "changed": true
+    }
+   },
+   "clause": {
+    "1.5": {
+     "answer": "4",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "4",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   },
+   "clause_band": {
+    "1.5": {
+     "answer": "4",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    },
+    "2.0": {
+     "answer": "4",
+     "hit": false,
+     "says_target_intermediate": false,
+     "changed": false
+    }
+   }
+  }
+ },
+ {
+  "question": "What color is the drink that comes from cows? Answer in one word.",
+  "intermediate": "milk",
+  "target": "coffee",
+  "base_answer": "Brown",
+  "vetted": false
+ }
+]

@@ -23,6 +23,7 @@ import numpy as np
 import torch
 
 from emu3 import Emu3, apply_chat
+from interventions import LensSwapper, first_word_token
 
 OUT = pathlib.Path(__file__).resolve().parent.parent / "results" / "3.1a_swap"
 JLENS_PATH = pathlib.Path("/workspace/phenomena/data/jlens/jlens_final.npz")
@@ -54,59 +55,6 @@ def git_commit():
                               text=True, cwd=pathlib.Path(__file__).parent).stdout.strip()
     except Exception:
         return "unknown"
-
-
-class LensSwapper:
-    """Forward hooks that swap two J-lens coordinates in the residual stream."""
-
-    def __init__(self, m: Emu3, J: torch.Tensor):
-        self.m, self.J = m, J
-        self.w = m.final_norm.weight.float()
-        self.active = False
-        self.alpha = 1.0
-        self.mats = {}      # layer -> (V (d,2), A (2,d)) with A = pinv(V)
-        self.handles = []
-        for li, layer in enumerate(m.text_model.layers):
-            self.handles.append(layer.register_forward_hook(self._hook(li + 1)))
-
-    def _hook(self, hs_index):
-        def fn(module, args, output):
-            if not self.active or hs_index not in self.mats:
-                return output
-            h = output[0] if isinstance(output, tuple) else output
-            if h.shape[1] == 1:      # decode step: leave generated positions alone
-                return output
-            V, A = self.mats[hs_index]
-            c = h.float() @ A.T                       # (B,T,2)
-            delta = (c[..., [1, 0]] - c) @ V.T        # swap coords, back to d
-            h = h + (self.alpha * delta).to(h.dtype)
-            if isinstance(output, tuple):
-                return (h,) + output[1:]
-            return h
-        return fn
-
-    def arm(self, src_id: int, tgt_id: int, layers, alpha: float):
-        self.mats = {}
-        for l in layers:
-            u_s = (self.m.W_U[src_id].float() * self.w)
-            u_t = (self.m.W_U[tgt_id].float() * self.w)
-            V = torch.stack([self.J[l] .T @ u_s, self.J[l].T @ u_t], dim=1)  # (d,2)
-            A = torch.linalg.pinv(V)                                          # (2,d)
-            self.mats[l] = (V, A)
-        self.alpha = alpha
-        self.active = True
-
-    def disarm(self):
-        self.active = False
-
-
-def first_word_token(m: Emu3, text: str):
-    """First answer word -> its single leading-space token id, or None."""
-    word = text.strip().split()[0].strip(".,!\"'") if text.strip() else ""
-    if not word:
-        return None, ""
-    ids = m.tok.encode(" " + word)
-    return (ids[0], word) if len(ids) >= 1 else (None, word)
 
 
 def main():

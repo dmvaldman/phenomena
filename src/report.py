@@ -35,6 +35,15 @@ DESCRIPTIONS = {
         "check that the spoken answer changes to the new word.\n\n"
         'ex: the model chose "Football"; we swap the football-direction for the '
         'rugby-direction in the residual stream and check it now says "Rugby".',
+    "3.3 two-hop reasoning":
+        "We ask a question whose answer requires an unspoken intermediate step, check that "
+        "the intermediate appears in the J-lens even though it is never written anywhere, "
+        "then swap it inside the activations and check whether the answer changes to match.\n\n"
+        'ex: *"How many legs does the animal that spins webs have? Answer with a number."* — '
+        'the model says "8"; " spider" ranks top-10 in the band without appearing in any '
+        "text. Swapping the spider-direction for the ant-direction (on the descriptor-clause "
+        'positions) should change the answer to "6". The depth control checks the '
+        "intermediate becomes readable at an earlier layer than the answer.",
     "3.1.b injected thought":
         "We inject a concept into the model's activations (no mention of it anywhere in the "
         "text) and ask the model to name the thought that was injected.\n\n"
@@ -91,8 +100,19 @@ def s31b():
     add("3.1.b injected thought", "baseline names a tested concept", round(float(base_hits), 3), 0.05, "<=")
 
 
+def s33():
+    man = json.load(open(R / "3.3_twohop" / "manifest.json"))
+    s = man["summary"]
+    add("3.3 two-hop reasoning", "intermediate in band top-10", round(s["int_top10"], 3), 0.50)
+    add("3.3 two-hop reasoning", "intermediate in band top-100", round(s["int_top100"], 3), 0.70)
+    add("3.3 two-hop reasoning", "intermediate readable before answer", round(s["int_before_answer"], 3), 0.50)
+    best_swap = max(v for cfg in s["swap_hit"].values() for v in cfg.values())
+    add("3.3 two-hop reasoning", "answer flips to swapped property (best config)", round(best_swap, 3), 0.30)
+    add("3.3 two-hop reasoning", "n vetted questions", s["n_vetted"], 8)
+
+
 def main():
-    for fn in (t1, s31a, s31b):
+    for fn in (t1, s31a, s31b, s33):
         try:
             fn()
         except FileNotFoundError as e:

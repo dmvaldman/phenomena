@@ -1,0 +1,40 @@
+{
+ "experiment": "3.3 two-hop reasoning",
+ "version": 1,
+ "properties": [
+  "P5 (workspace content is used by reasoning)"
+ ],
+ "date": "2026-07-15T00:17:31.799130+00:00",
+ "model": "BAAI/Emu3-Chat-hf",
+ "jlens": "/workspace/phenomena/data/jlens/jlens_final.npz",
+ "band_layers": [
+  16,
+  30
+ ],
+ "alphas": [
+  1.5,
+  2.0
+ ],
+ "decoding": "greedy",
+ "git_commit": "",
+ "summary": {
+  "n_vetted": 10,
+  "int_top10": 0.9,
+  "int_top100": 1.0,
+  "int_before_answer": 0.7,
+  "swap_hit": {
+   "band": {
+    "1.5": 0.0,
+    "2.0": 0.0
+   },
+   "clause": {
+    "1.5": 0.0,
+    "2.0": 0.1
+   },
+   "clause_band": {
+    "1.5": 0.0,
+    "2.0": 0.0
+   }
+  }
+ }
+}
